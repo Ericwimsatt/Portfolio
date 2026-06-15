@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eric Wimsatt — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+  <!-- SIDEBAR NAV -->
+  <nav class="sidebar">
+    <div class="sidebar-logo">EW</div>
+    <ul class="sidebar-links">
+      <li><a href="#about"><i class="fas fa-user"></i><span>About</span></a></li>
+      <li><a href="#experience"><i class="fas fa-briefcase"></i><span>Experience</span></a></li>
+      <li><a href="#projects"><i class="fas fa-code"></i><span>Projects</span></a></li>
+      <li><a href="#contact"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+    </ul>
+    <a href="https://github.com/Ericwimsatt" target="_blank" class="sidebar-gh">
+      <i class="fab fa-github"></i>
+    </a>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+    <!-- HERO -->
+    <section id="about" class="hero">
+      <div class="hero-accent"></div>
+      <div class="hero-inner">
+        <div class="avatar-block">EW</div>
+        <div class="hero-text">
+          <p class="hero-eyebrow">Hi, I'm</p>
+          <h1>Eric Wimsatt</h1>
+          <p class="hero-title">Software Engineer</p>
+          <p class="hero-body">
+            Former Roblox engineer — joined at <strong>~800 people</strong>, left at <strong>~2,500</strong>.
+            Looking to join a smaller startup where I can own more of the product and ship fast.
+          </p>
+          <div class="hero-chips">
+            <span class="chip">React</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">Python</span>
+            <span class="chip">C++</span>
+            <span class="chip">Lua</span>
+          </div>
+          <div class="hero-ctas">
+            <a href="mailto:ericwimsatt@gmail.com" class="btn btn-primary"><i class="fas fa-envelope"></i> Get in Touch</a>
+            <a href="https://github.com/Ericwimsatt" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="content-section">
+      <h2 class="section-heading"><span class="heading-marker"></span>Experience</h2>
+
+      <div class="timeline">
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-top">
+              <div>
+                <p class="tl-company">Roblox</p>
+                <p class="tl-role">Software Engineer, Growth</p>
+              </div>
+              <span class="tl-dates">Jul 2021 – Jul 2024</span>
+            </div>
+            <div class="tl-chips">
+              <span class="chip chip-sm">React</span>
+              <span class="chip chip-sm">Lua</span>
+              <span class="chip chip-sm">C++</span>
+              <span class="chip chip-sm">Java</span>
+            </div>
+            <p class="tl-desc">Mobile app lifecycle and core UIs at one of the fastest-growing gaming platforms.</p>
+            <ul class="tl-bullets">
+              <li>Halved time-to-interactive on app startup by reworking network request sequencing.</li>
+              <li>+2% startup success rate via targeted retry logic at common failure points.</li>
+              <li>+4% game-join success rate through failure-route redesign and in-game toasts.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-top">
+              <div>
+                <p class="tl-company">Public Editor</p>
+                <p class="tl-role">Software Engineer</p>
+              </div>
+              <span class="tl-dates">Jan 2018 – Feb 2022</span>
+            </div>
+            <div class="tl-chips">
+              <span class="chip chip-sm">Python</span>
+              <span class="chip chip-sm">Numpy</span>
+              <span class="chip chip-sm">Pandas</span>
+            </div>
+            <p class="tl-desc">Misinformation-tracking platform — data systems and pipeline optimization.</p>
+            <ul class="tl-bullets">
+              <li>Built the data pipeline from scratch and led a team to scale it.</li>
+              <li>Annotator consensus framework still cited in academic research.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-top">
+              <div>
+                <p class="tl-company">Personal Projects</p>
+                <p class="tl-role">Independent Engineer</p>
+              </div>
+              <span class="tl-dates">Jul 2024 – Present</span>
+            </div>
+            <div class="tl-chips">
+              <span class="chip chip-sm">React</span>
+              <span class="chip chip-sm">TypeScript</span>
+              <span class="chip chip-sm">Flask</span>
+            </div>
+            <p class="tl-desc">Post-accident recovery + active side projects (see below).</p>
+          </div>
+        </div>
+
+        <div class="tl-item tl-edu">
+          <div class="tl-dot tl-dot-edu"></div>
+          <div class="tl-card tl-card-edu">
+            <p class="tl-company">UC Berkeley — Computer Science</p>
+            <p class="tl-role">B.S. · Class of 2021</p>
+            <p class="tl-desc" style="margin-top:8px">Research: GPU bloom filter for bulk genome sequencing (MetaHipMer project).</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="content-section">
+      <h2 class="section-heading"><span class="heading-marker"></span>Projects</h2>
+      <p class="section-sub">Pinned on GitHub</p>
+      <div class="proj-grid">
+
+        <a href="https://github.com/Ericwimsatt/bulk-refactor" target="_blank" class="proj-card">
+          <div class="proj-ph"><span>🛠</span><p>No preview</p></div>
+          <div class="proj-body">
+            <div class="proj-top">
+              <p class="proj-name">bulk-refactor</p>
+              <span class="proj-lang">Python</span>
+            </div>
+            <p class="proj-desc">CLI toolkit for repetitive codebase-wide refactors with string manipulation + AI fallback.</p>
+          </div>
+        </a>
+
+        <a href="https://github.com/Ericwimsatt/manhunt" target="_blank" class="proj-card">
+          <div class="proj-ph"><span>🗺</span><p>No preview</p></div>
+          <div class="proj-body">
+            <div class="proj-top">
+              <p class="proj-name">manhunt</p>
+              <span class="proj-lang">HTML / TS</span>
+            </div>
+            <p class="proj-desc">Real-time companion app for a city-scale manhunt game in Golden Gate Park.</p>
+          </div>
+        </a>
+
+        <a href="https://github.com/Ericwimsatt/rockets" target="_blank" class="proj-card">
+          <div class="proj-ph"><span>🃏</span><p>No preview</p></div>
+          <div class="proj-body">
+            <div class="proj-top">
+              <p class="proj-name">rockets</p>
+              <span class="proj-lang">Python</span>
+            </div>
+            <p class="proj-desc">Extended Treys poker library with PLO evaluation and advanced simulations.</p>
+          </div>
+        </a>
+
+        <a href="https://github.com/Ericwimsatt/pseudo" target="_blank" class="proj-card">
+          <div class="proj-ph"><span>📖</span><p>No preview</p></div>
+          <div class="proj-body">
+            <div class="proj-top">
+              <p class="proj-name">pseudo</p>
+              <span class="proj-lang proj-lang-wip">WIP · HTML/Py</span>
+            </div>
+            <p class="proj-desc">Plain-English code viewer for non-technical readers.</p>
+          </div>
+        </a>
+
+        <a href="https://github.com/Ericwimsatt/gamble" target="_blank" class="proj-card">
+          <div class="proj-ph"><span>🎲</span><p>No preview</p></div>
+          <div class="proj-body">
+            <div class="proj-top">
+              <p class="proj-name">gamble</p>
+              <span class="proj-lang">Python</span>
+            </div>
+            <p class="proj-desc">Poker hand equity tools for better in-game decisions.</p>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="content-section contact-section">
+      <h2 class="section-heading"><span class="heading-marker"></span>Contact</h2>
+      <div class="contact-row">
+        <a href="mailto:ericwimsatt@gmail.com" class="contact-item">
+          <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+          <div><p class="ci-label">Email</p><p class="ci-val">ericwimsatt@gmail.com</p></div>
+        </a>
+        <a href="tel:7604025406" class="contact-item">
+          <div class="ci-icon"><i class="fas fa-phone"></i></div>
+          <div><p class="ci-label">Phone</p><p class="ci-val">(760) 402-5406</p></div>
+        </a>
+        <a href="https://github.com/Ericwimsatt" target="_blank" class="contact-item">
+          <div class="ci-icon"><i class="fab fa-github"></i></div>
+          <div><p class="ci-label">GitHub</p><p class="ci-val">github.com/Ericwimsatt</p></div>
+        </a>
+        <div class="contact-item">
+          <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div><p class="ci-label">Location</p><p class="ci-val">San Francisco, CA</p></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

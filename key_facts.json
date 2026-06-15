@@ -1,0 +1,94 @@
+{
+  "personal": {
+    "name": "Eric Wimsatt",
+    "location": "San Francisco, CA",
+    "email": "ericwimsatt@gmail.com",
+    "phone": "(760)-402-5406",
+    "github": "https://github.com/Ericwimsatt",
+    "tagline": "Software Engineer · React · TypeScript · Python · C++",
+    "summary": "Ex-Roblox engineer who joined at ~800 people and left at ~2500. Looking to join a smaller startup where I can own larger parts of the product and move fast."
+  },
+  "experience": [
+    {
+      "company": "Independent / Personal Projects",
+      "role": "Software Engineer",
+      "start": "July 2024",
+      "end": "Present",
+      "tech": ["React", "TypeScript", "Python", "Flask"],
+      "description": "Following a car accident, focused on rehabilitation and worked on personal projects.",
+      "highlights": []
+    },
+    {
+      "company": "Roblox",
+      "role": "Software Engineer, Growth",
+      "start": "July 2021",
+      "end": "July 2024",
+      "tech": ["React", "Lua", "C++", "Java"],
+      "company_size_start": 800,
+      "company_size_end": 2500,
+      "description": "Worked on the mobile application lifecycle and core user interfaces.",
+      "highlights": [
+        "Halved time-to-interactive on startup by optimizing the network requests required to start the app.",
+        "2% improvement in app startup success rate by adding retry mechanisms to common failure points.",
+        "Improved game-join success rate by 4% by identifying failure cases, redesigning routes, and adding in-game toasts to reduce user confusion."
+      ]
+    },
+    {
+      "company": "UC Berkeley",
+      "role": "B.S. Computer Science",
+      "start": null,
+      "end": "Class of 2021",
+      "tech": [],
+      "description": "Research to improve performance of bulk genome sequencing on the MetaHipMer project; attempted a GPU implementation of a memory-efficient bloom filter.",
+      "highlights": []
+    },
+    {
+      "company": "Public Editor",
+      "role": "Software Engineer",
+      "start": "January 2018",
+      "end": "February 2022",
+      "tech": ["Python", "Numpy", "Pandas"],
+      "description": "Collaborative platform for identifying misinformation. Created the data systems and led a team to optimize the process.",
+      "highlights": [
+        "Designed a framework for measuring consensus among text annotators, extending the existing standard to factor in annotators' selected text alongside question responses. The framework continues to be widely utilized in academic research."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "bulk-refactor",
+      "url": "https://github.com/Ericwimsatt/bulk-refactor",
+      "language": "Python",
+      "description": "CLI toolkit that applies repetitive structural changes across an entire codebase using deterministic string manipulation, with AI agent fallback for complex cases.",
+      "has_images": false
+    },
+    {
+      "name": "manhunt",
+      "url": "https://github.com/Ericwimsatt/manhunt",
+      "language": "HTML / TypeScript",
+      "description": "Real-time companion web app for organizing and playing a city-scale game of manhunt in Golden Gate Park.",
+      "has_images": false
+    },
+    {
+      "name": "rockets",
+      "url": "https://github.com/Ericwimsatt/rockets",
+      "language": "Python",
+      "description": "Fork of the Treys poker library extended to support more advanced simulations including Pot-Limit Omaha evaluation and deck seeding.",
+      "has_images": false
+    },
+    {
+      "name": "pseudo",
+      "url": "https://github.com/Ericwimsatt/pseudo",
+      "language": "HTML / Python",
+      "description": "Plain-English code viewer that lets non-technical people read a codebase without relying on AI summaries. [WIP]",
+      "has_images": false
+    },
+    {
+      "name": "gamble",
+      "url": "https://github.com/Ericwimsatt/gamble",
+      "language": "Python",
+      "description": "Python tools for analyzing poker hand equity and improving decision-making at the table.",
+      "has_images": false
+    }
+  ]
+}

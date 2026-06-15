@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eric Wimsatt — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="nameplate">
+      <div class="avatar-wrap">
+        <div class="avatar-placeholder">EW</div>
+      </div>
+      <h1>Eric Wimsatt</h1>
+      <p class="subtitle">Software Engineer &nbsp;·&nbsp; React &nbsp;·&nbsp; TypeScript &nbsp;·&nbsp; Python &nbsp;·&nbsp; C++</p>
+      <p class="hero-summary">
+        Ex-Roblox engineer — joined at ~800 people, left at ~2,500. 
+        Looking for a smaller startup where I can own more of the product and move fast.
+      </p>
+      <div class="hero-links">
+        <a href="https://github.com/Ericwimsatt" target="_blank" class="hero-btn"><i class="fab fa-github"></i> GitHub</a>
+        <a href="mailto:ericwimsatt@gmail.com" class="hero-btn"><i class="fas fa-envelope"></i> Email</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- DESK -->
+  <main class="desk-surface">
+    <div class="desk-lamp"></div>
+
+    <!-- EXPERIENCE CARD -->
+    <section class="paper-card" id="experience">
+      <div class="paper-pin"></div>
+      <h2><i class="fas fa-briefcase"></i> Experience</h2>
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-company">Roblox</span>
+          <span class="job-role">Software Engineer, Growth</span>
+          <span class="job-dates">Jul 2021 – Jul 2024</span>
+        </div>
+        <p class="job-stack">React · Lua · C++ · Java</p>
+        <p class="job-desc">Mobile app lifecycle and core user interfaces at one of the fastest-growing gaming platforms in the world.</p>
+        <ul class="job-bullets">
+          <li>Halved time-to-interactive on startup by optimizing network requests.</li>
+          <li>Improved app startup success rate by 2% with targeted retry mechanisms.</li>
+          <li>Lifted game-join success rate by 4% through redesigned failure-recovery routes and in-game toasts.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-company">Public Editor</span>
+          <span class="job-role">Software Engineer</span>
+          <span class="job-dates">Jan 2018 – Feb 2022</span>
+        </div>
+        <p class="job-stack">Python · Numpy · Pandas</p>
+        <p class="job-desc">Collaborative platform for identifying misinformation in the media.</p>
+        <ul class="job-bullets">
+          <li>Built the data pipeline from scratch and led a team to optimize it end-to-end.</li>
+          <li>Designed an annotator-consensus framework still cited widely in academic research.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <span class="job-company">Personal Projects</span>
+          <span class="job-role">Independent Engineer</span>
+          <span class="job-dates">Jul 2024 – Present</span>
+        </div>
+        <p class="job-stack">React · TypeScript · Python · Flask</p>
+        <p class="job-desc">Post-accident rehabilitation, plus active development on side projects.</p>
+      </div>
+    </section>
+
+    <!-- EDUCATION STICKY NOTE -->
+    <div class="sticky-note" id="education">
+      <div class="sticky-tape"></div>
+      <h3>🎓 Education</h3>
+      <p><strong>UC Berkeley</strong></p>
+      <p>B.S. Computer Science · Class of 2021</p>
+      <p class="sticky-sub">Research: GPU bloom filter for bulk genome sequencing (MetaHipMer)</p>
+    </div>
+
+    <!-- PROJECTS SECTION -->
+    <section class="projects-section" id="projects">
+      <h2 class="projects-heading"><i class="fas fa-code"></i> Projects</h2>
+      <div class="projects-grid">
+
+        <a href="https://github.com/Ericwimsatt/bulk-refactor" target="_blank" class="project-card">
+          <div class="project-img-placeholder">
+            <span>🛠</span>
+            <p>No preview available</p>
+          </div>
+          <div class="project-info">
+            <h3>bulk-refactor</h3>
+            <p class="project-lang">Python</p>
+            <p>CLI toolkit that applies repetitive structural changes across a codebase using deterministic string manipulation with AI fallback.</p>
+          </div>
+        </a>
+
+        <a href="https://github.com/Ericwimsatt/manhunt" target="_blank" class="project-card">
+          <div class="project-img-placeholder">
+            <span>🗺</span>
+            <p>No preview available</p>
+          </div>
+          <div class="project-info">
+            <h3>manhunt</h3>
+            <p class="project-lang">HTML / TypeScript</p>
+            <p>Real-time companion app for a city-scale game of manhunt in Golden Gate Park.</p>
+          </div>
+        </a>
+
+        <a href="https://github.com/Ericwimsatt/rockets" target="_blank" class="project-card">
+          <div class="project-img-placeholder">
+            <span>🃏</span>
+            <p>No preview available</p>
+          </div>
+          <div class="project-info">
+            <h3>rockets</h3>
+            <p class="project-lang">Python</p>
+            <p>Extended fork of the Treys poker library with Pot-Limit Omaha support and advanced simulations.</p>
+          </div>
+        </a>
+
+        <a href="https://github.com/Ericwimsatt/pseudo" target="_blank" class="project-card">
+          <div class="project-img-placeholder">
+            <span>📖</span>
+            <p>No preview available</p>
+          </div>
+          <div class="project-info">
+            <h3>pseudo <span class="wip-badge">WIP</span></h3>
+            <p class="project-lang">HTML / Python</p>
+            <p>Plain-English code viewer so non-technical folks can read a codebase without AI summaries.</p>
+          </div>
+        </a>
+
+        <a href="https://github.com/Ericwimsatt/gamble" target="_blank" class="project-card">
+          <div class="project-img-placeholder">
+            <span>🎲</span>
+            <p>No preview available</p>
+          </div>
+          <div class="project-info">
+            <h3>gamble</h3>
+            <p class="project-lang">Python</p>
+            <p>Tools for analyzing poker hand equity and improving table decision-making.</p>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- CONTACT BUSINESS CARD -->
+    <div class="business-card" id="contact">
+      <div class="bc-front">
+        <p class="bc-name">Eric Wimsatt</p>
+        <p class="bc-title">Software Engineer</p>
+        <hr class="bc-divider" />
+        <p><i class="fas fa-envelope"></i> ericwimsatt@gmail.com</p>
+        <p><i class="fas fa-phone"></i> (760) 402-5406</p>
+        <p><i class="fab fa-github"></i> github.com/Ericwimsatt</p>
+        <p><i class="fas fa-map-marker-alt"></i> San Francisco, CA</p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="desk-footer">
+    <p>Built by Eric Wimsatt &nbsp;·&nbsp; <a href="https://github.com/Ericwimsatt" target="_blank">github.com/Ericwimsatt</a></p>
+  </footer>
+
+</body>
+</html>

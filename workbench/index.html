@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eric Wimsatt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main class="workbench">
+
+  <!-- ── TOP ROW: Hero + About ── -->
+  <div class="top-row">
+
+    <!-- HERO NOTE -->
+    <article class="note yellow hero" data-rotate="-2">
+      <span class="pushpin" aria-hidden="true"></span>
+      <h1>Eric Wimsatt</h1>
+      <p class="subtitle">Software Engineer</p>
+      <ul class="chips">
+        <li>React</li>
+        <li>TypeScript</li>
+        <li>Python</li>
+        <li>C++</li>
+        <li>Lua</li>
+      </ul>
+      <p class="blurb">
+        Ex-Roblox (joined at ~800 &rarr; left at ~2,500).<br>
+        UC Berkeley CS. Looking for an early-stage startup<br>
+        where I can own large pieces and move fast.
+      </p>
+      <nav class="note-nav" aria-label="Page sections">
+        <a href="#experience"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Experience</a>
+        <a href="#projects"><i class="fa-solid fa-code" aria-hidden="true"></i> Projects</a>
+        <a href="#about"><i class="fa-regular fa-face-smile" aria-hidden="true"></i> About</a>
+        <a href="#contact"><i class="fa-regular fa-envelope" aria-hidden="true"></i> Contact</a>
+      </nav>
+    </article>
+
+    <!-- ABOUT NOTE -->
+    <article class="note green about" id="about" data-rotate="3">
+      <span class="tape" aria-hidden="true"></span>
+      <h2><i class="fa-solid fa-leaf" aria-hidden="true"></i> About</h2>
+      <p>I enjoy solving ambiguous product problems&mdash;the kind where the solution isn&rsquo;t clear until you&rsquo;ve talked to real users.</p>
+      <p>Since leaving Roblox I&rsquo;ve been building open-source tools, experimenting with AI systems, and exploring startup ideas in SF.</p>
+      <p>I like working close to users, shipping fast, and owning the full stack.</p>
+      <p class="location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> San Francisco, CA</p>
+    </article>
+
+  </div>
+
+  <!-- ── EXPERIENCE (legal pad) ── -->
+  <article class="legal-pad" id="experience" data-rotate="0.8">
+    <div class="rings" aria-hidden="true">
+      <span></span><span></span><span></span>
+      <span></span><span></span><span></span>
+      <span></span><span></span>
+    </div>
+    <div class="pad-inner">
+
+      <h2 class="pad-heading">Experience</h2>
+
+      <div class="job">
+        <div class="job-top">
+          <strong>Roblox</strong>
+          <em>Software Engineer, Growth &middot; Jul 2021 &ndash; Jul 2024</em>
+        </div>
+        <ul>
+          <li>Halved time-to-interactive on startup by reordering and batching network requests</li>
+          <li>+2% app startup success rate by adding retry mechanisms at common failure points</li>
+          <li>+4% game-join success rate via UX redesign and in-game feedback toasts</li>
+        </ul>
+        <div class="tags">
+          <span>React</span><span>Lua</span><span>C++</span><span>Java</span>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <strong>Public Editor</strong>
+          <em>Software Engineer &middot; Jan 2018 &ndash; Feb 2022</em>
+        </div>
+        <ul>
+          <li>Built data systems for a collaborative misinformation identification platform</li>
+          <li>Designed annotator consensus framework still widely cited in academic research</li>
+        </ul>
+        <div class="tags">
+          <span>Python</span><span>Numpy</span><span>Pandas</span>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <strong>UC Berkeley</strong>
+          <em>B.S. Computer Science &middot; Class of 2021</em>
+        </div>
+        <ul>
+          <li>Research on GPU-accelerated bulk genome sequencing &mdash; MetaHipMer project</li>
+        </ul>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- ── PROJECTS (sticky cluster) ── -->
+  <section id="projects">
+    <div class="proj-header">
+      <i class="fa-solid fa-thumbtack" aria-hidden="true"></i>
+      <span>Projects</span>
+    </div>
+    <div class="proj-grid">
+
+      <a href="https://github.com/Ericwimsatt/bulk-refactor" target="_blank" rel="noopener noreferrer"
+         class="note orange proj" data-rotate="-3">
+        <i class="fa-solid fa-wand-magic-sparkles proj-icon" aria-hidden="true"></i>
+        <h3>bulk-refactor</h3>
+        <p>CLI toolkit applying repetitive structural changes across a codebase, with AI agent fallback for complex cases.</p>
+        <span class="proj-lang">Python</span>
+      </a>
+
+      <a href="https://github.com/Ericwimsatt/manhunt" target="_blank" rel="noopener noreferrer"
+         class="note orange proj" data-rotate="2.5">
+        <i class="fa-solid fa-map-location-dot proj-icon" aria-hidden="true"></i>
+        <h3>manhunt</h3>
+        <p>Real-time companion app for organizing a city-scale game of manhunt in Golden Gate Park.</p>
+        <span class="proj-lang">HTML / TypeScript</span>
+      </a>
+
+      <a href="https://github.com/Ericwimsatt/rockets" target="_blank" rel="noopener noreferrer"
+         class="note orange proj" data-rotate="-1.5">
+        <i class="fa-solid fa-diamond proj-icon" aria-hidden="true"></i>
+        <h3>rockets</h3>
+        <p>Extended Treys poker library with Pot-Limit Omaha evaluation and deck seeding.</p>
+        <span class="proj-lang">Python</span>
+      </a>
+
+      <a href="https://github.com/Ericwimsatt/pseudo" target="_blank" rel="noopener noreferrer"
+         class="note orange proj" data-rotate="3.5">
+        <i class="fa-solid fa-glasses proj-icon" aria-hidden="true"></i>
+        <h3>pseudo</h3>
+        <p>Plain-English code viewer for non-technical people &mdash; no AI summaries required. [WIP]</p>
+        <span class="proj-lang">HTML / Python</span>
+      </a>
+
+      <a href="https://github.com/Ericwimsatt/gamble" target="_blank" rel="noopener noreferrer"
+         class="note orange proj" data-rotate="-2.5">
+        <i class="fa-solid fa-chart-simple proj-icon" aria-hidden="true"></i>
+        <h3>gamble</h3>
+        <p>Python tools for analyzing poker hand equity and improving table decisions.</p>
+        <span class="proj-lang">Python</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ── BOTTOM ROW: Contact + GitHub note ── -->
+  <div class="bottom-row">
+
+    <article class="business-card" id="contact" data-rotate="-1">
+      <div class="card-accent" aria-hidden="true"></div>
+      <div class="card-left">
+        <i class="fa-solid fa-terminal card-icon" aria-hidden="true"></i>
+        <span class="card-tagline">Let&rsquo;s build something</span>
+      </div>
+      <div class="card-sep" aria-hidden="true"></div>
+      <div class="card-right">
+        <p class="card-name">Eric Wimsatt</p>
+        <p class="card-role">Software Engineer &middot; San Francisco</p>
+        <ul class="card-links">
+          <li>
+            <a href="mailto:ericwimsatt@gmail.com">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i> ericwimsatt@gmail.com
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Ericwimsatt" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-github" aria-hidden="true"></i> github.com/Ericwimsatt
+            </a>
+          </li>
+          <li>
+            <a href="tel:+17604025406">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i> (760) 402-5406
+            </a>
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <a href="https://github.com/Ericwimsatt" target="_blank" rel="noopener noreferrer"
+       class="note pink gh-note" data-rotate="4">
+      <span class="tape" aria-hidden="true"></span>
+      <i class="fa-brands fa-github gh-icon" aria-hidden="true"></i>
+      <span class="gh-label">@Ericwimsatt</span>
+    </a>
+
+  </div>
+
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
