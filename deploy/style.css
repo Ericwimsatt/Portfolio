@@ -799,16 +799,18 @@ body::before {
   flex-shrink: 0;
   width: 26px;
   height: 26px;
-  margin-top: 4px;
-  background: #f0f4f8;
-  border: 1.5px solid #d0d8e4;
-  border-radius: 6px;
-  box-shadow: 1px 1px 0 #c0cad6;
+  margin-top: 6px;
 }
 .proj-icon svg {
-  width: 16px;
-  height: 16px;
+  width: 22px;
+  height: 22px;
+  overflow: visible;
 }
+.proj-lines li:nth-child(1) .proj-icon { transform: rotate(-2deg); }
+.proj-lines li:nth-child(2) .proj-icon { transform: rotate(1.5deg); }
+.proj-lines li:nth-child(3) .proj-icon { transform: rotate(-1.5deg); }
+.proj-lines li:nth-child(4) .proj-icon { transform: rotate(2deg); }
+.proj-lines li:nth-child(5) .proj-icon { transform: rotate(-2.5deg); }
 .proj-text { flex: 1; }
 
 /* ════════════════════════════════════════════
