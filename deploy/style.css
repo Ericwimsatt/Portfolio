@@ -939,7 +939,7 @@ body::before {
 }
 
 .dip-honors em {
-  font-family: "Caveat", cursive;
+  font-family: "Caveat";
   font-size: 1.3rem;
   color: #5a3a1a;
 }
