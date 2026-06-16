@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eric Wimsatt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="page-shell">
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <header class="hero">
+    <svg class="tape-filter-def" aria-hidden="true" focusable="false">
+      <defs>
+        <filter id="tape-torn" x="-10%" y="-28%" width="120%" height="156%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.065" numOctaves="4" seed="8" result="noise"/>
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="10" xChannelSelector="R" yChannelSelector="G" result="torn"/>
+          <feDropShadow dx="1" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.28" in="torn"/>
+        </filter>
+      </defs>
+    </svg>
+    <div class="tape-name">
+      <div class="tape-bg" aria-hidden="true"></div>
+      Eric Wimsatt
+    </div>
+    <a href="https://github.com/Ericwimsatt" target="_blank" rel="noopener" class="cat-link" title="GitHub @Ericwimsatt">
+      <svg class="cat-svg" viewBox="0 0 178 88" xmlns="http://www.w3.org/2000/svg" aria-label="Purple cat laying down — GitHub">
+        <!-- Tail (behind body, curling up from right) -->
+        <path d="M158 57 Q180 37 170 14 Q165 4 171 -1" stroke="#2b1166" stroke-width="9" fill="none" stroke-linecap="round"/>
+        <!-- Body (loaf) -->
+        <ellipse cx="115" cy="60" rx="46" ry="23" fill="#2b1166"/>
+        <!-- Paws (back, peeking from rear of body) -->
+        <ellipse cx="129" cy="81" rx="13" ry="7" fill="#361877"/>
+        <ellipse cx="150" cy="81" rx="13" ry="7" fill="#361877"/>
+        <!-- Body–back-paw separator crease -->
+        <path d="M117 75 Q139 72 161 75" stroke="#3b0764" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+        <!-- Paws (front, peeking from under body) -->
+        <ellipse cx="80" cy="78" rx="13" ry="7" fill="#361877"/>
+        <ellipse cx="101" cy="79" rx="13" ry="7" fill="#361877"/>
+        <!-- Body–paw separator crease -->
+        <path d="M68 72 Q90 69 116 72" stroke="#3b0764" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+        <!-- Neck (bridges head and body) -->
+        <ellipse cx="76" cy="55" rx="10" ry="13" fill="#2b1166"/>
+        <!-- Head (left of body) -->
+        <circle cx="50" cy="40" r="27" fill="#2b1166"/>
+        <!-- Head–body neck crease -->
+        <path d="M78 46 Q85 55 77 65" stroke="#3b0764" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        <!-- Ear L -->
+        <polygon points="30,26 24,8 44,22" fill="#2b1166"/>
+        <polygon points="32,24 28,11 42,21" fill="#361877"/>
+        <!-- Ear R -->
+        <polygon points="70,26 76,8 60,22" fill="#2b1166"/>
+        <polygon points="68,24 73,11 62,21" fill="#361877"/>
+        <!-- Eyes -->
+        <ellipse cx="42" cy="38" rx="5.5" ry="6.5" fill="#10b981"/>
+        <ellipse cx="60" cy="38" rx="5.5" ry="6.5" fill="#10b981"/>
+        <ellipse cx="42" cy="39" rx="2.2" ry="4.8" fill="#111"/>
+        <ellipse cx="60" cy="39" rx="2.2" ry="4.8" fill="#111"/>
+        <circle cx="44" cy="36" r="1.4" fill="white"/>
+        <circle cx="62" cy="36" r="1.4" fill="white"/>
+        <!-- Nose -->
+        <polygon points="51,47 47,51 55,51" fill="#f0abfc"/>
+        <!-- Mouth -->
+        <path d="M46 53 Q51 57 56 53" stroke="#5b2284" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+        <!-- Whiskers L -->
+        <line x1="2"  y1="46" x2="44" y2="48" stroke="rgba(255,255,255,0.85)" stroke-width="1.2"/>
+        <line x1="2"  y1="52" x2="44" y2="52" stroke="rgba(255,255,255,0.85)" stroke-width="1.2"/>
+        <!-- Whiskers R -->
+        <line x1="84" y1="46" x2="58" y2="48" stroke="rgba(255,255,255,0.85)" stroke-width="1.2"/>
+        <line x1="84" y1="52" x2="58" y2="52" stroke="rgba(255,255,255,0.85)" stroke-width="1.2"/>
+      </svg>
+    </a>
+  </header>
+
+  <!-- ══════════════ DESK GRID ══════════════ -->
+  <main class="desk-grid">
+
+    <!-- ① Roblox R6 character lying on desk -->
+    <button class="desk-item" data-modal="modal-roblox" aria-label="Roblox experience">
+      <div class="r6-wrap">
+        <div class="r6">
+          <div class="r6-head"></div>
+          <div class="r6-body-row">
+            <div class="r6-arm r6-arm-l"></div>
+            <div class="r6-torso"></div>
+            <div class="r6-arm r6-arm-r"></div>
+          </div>
+          <div class="r6-leg-row">
+            <div class="r6-leg"></div>
+            <div class="r6-leg"></div>
+          </div>
+        </div>
+        <div class="r6-shadow"></div>
+      </div>
+    </button>
+
+    <!-- ② About — framed photo -->
+    <button class="desk-item" data-modal="modal-about" aria-label="About me">
+      <div class="photo-frame-wrap">
+        <div class="pf-outer">
+          <div class="pf-mat">
+            <img src="../static/headshot.jpeg" alt="Eric Wimsatt" class="pf-img">
+          </div>
+        </div>
+        <div class="pf-stand"></div>
+      </div>
+    </button>
+
+    <!-- ③ Personal Projects — notebook -->
+    <button class="desk-item" data-modal="modal-projects" aria-label="Personal projects">
+      <div class="nb-item">
+        <div class="nb-rings-side">
+          <span></span><span></span><span></span>
+          <span></span><span></span><span></span>
+        </div>
+        <div class="nb-cover-face">
+          <div class="nb-label-area">
+            <p class="nb-subject-text">Fun</p>
+            <p class="nb-title-text">Projects</p>
+          </div>
+          <div class="nb-rule"></div>
+        </div>
+      </div>
+    </button>
+
+    <!-- ④ Cal Golden Bear figurine -->
+    <button class="desk-item" data-modal="modal-cal" aria-label="UC Berkeley">
+      <div class="bear-wrap">
+        <svg class="bear-svg" viewBox="0 0 120 135" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <ellipse cx="60" cy="130" rx="40" ry="6" fill="rgba(0,0,0,0.18)"/>
+          <ellipse cx="60" cy="96" rx="32" ry="28" fill="#FDB924" stroke="#c49010" stroke-width="1.5"/>
+          <ellipse cx="60" cy="98" rx="19" ry="18" fill="#e8b840" opacity="0.55"/>
+          <circle cx="60" cy="53" r="29" fill="#FDB924" stroke="#c49010" stroke-width="1.5"/>
+          <circle cx="35" cy="30" r="12" fill="#FDB924" stroke="#c49010" stroke-width="1.5"/>
+          <circle cx="35" cy="30" r="7.5" fill="#d89820"/>
+          <circle cx="85" cy="30" r="12" fill="#FDB924" stroke="#c49010" stroke-width="1.5"/>
+          <circle cx="85" cy="30" r="7.5" fill="#d89820"/>
+          <circle cx="50" cy="48" r="5.5" fill="#003262"/>
+          <circle cx="70" cy="48" r="5.5" fill="#003262"/>
+          <circle cx="51" cy="47" r="2"   fill="white"/>
+          <circle cx="71" cy="47" r="2"   fill="white"/>
+          <ellipse cx="60" cy="62" rx="13" ry="9.5" fill="#d89820"/>
+          <ellipse cx="60" cy="58" rx="5.5" ry="3.5" fill="#2a1200"/>
+          <path d="M54 66 Q60 72 66 66" stroke="#2a1200" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          <ellipse cx="36" cy="116" rx="13" ry="8.5" fill="#FDB924" stroke="#c49010" stroke-width="1.5"/>
+          <ellipse cx="84" cy="116" rx="13" ry="8.5" fill="#FDB924" stroke="#c49010" stroke-width="1.5"/>
+          <line x1="31" y1="116" x2="29" y2="123" stroke="#c49010" stroke-width="1.3"/>
+          <line x1="36" y1="117" x2="36" y2="124" stroke="#c49010" stroke-width="1.3"/>
+          <line x1="41" y1="116" x2="43" y2="123" stroke="#c49010" stroke-width="1.3"/>
+          <line x1="79" y1="116" x2="77" y2="123" stroke="#c49010" stroke-width="1.3"/>
+          <line x1="84" y1="117" x2="84" y2="124" stroke="#c49010" stroke-width="1.3"/>
+          <line x1="89" y1="116" x2="91" y2="123" stroke="#c49010" stroke-width="1.3"/>
+        </svg>
+        <div class="cal-label">Cal</div>
+      </div>
+    </button>
+
+    <!-- ⑥ Contact — thumbtack note -->
+    <div class="desk-item contact-item">
+      <div class="contact-note">
+        <div class="thumbtack">
+          <div class="pin-head"></div>
+          <div class="pin-shaft"></div>
+        </div>
+        <ul class="contact-list">
+          <li><a href="mailto:ericwimsatt@gmail.com">ericwimsatt@gmail.com</a></li>
+          <li><a href="https://github.com/Ericwimsatt" target="_blank" rel="noopener">github.com/Ericwimsatt</a></li>
+          <li><a href="tel:+17604025406">(760) 402-5406</a></li>
+          <li>San Francisco, CA</li>
+        </ul>
+      </div>
+    </div>
+
+  </main>
+</div><!-- /page-shell -->
+
+<!-- ══════════════ MODALS ══════════════ -->
+<div class="overlay" id="overlay" aria-hidden="true">
+
+  <!-- ROBLOX -->
+  <div class="modal" id="modal-roblox" role="dialog" aria-modal="true" aria-label="Roblox experience">
+    <button class="modal-x" aria-label="Close">&#x2715;</button>
+    <div class="chat-app">
+      <div class="chat-header">
+        <div class="chat-avatar">
+          <svg viewBox="0 0 40 40" width="38" height="38">
+            <g transform="rotate(5, 20, 20)">
+              <path fill-rule="evenodd" fill="#111" d="M2,2 H38 V38 H2 Z M16,16 H24 V24 H16 Z"/>
+            </g>
+          </svg>
+        </div>
+        <div>
+          <div class="chat-name">Roblox</div>
+          <div class="chat-sub">Software Engineer, Growth &middot; Jul 2021 &ndash; Jul 2024</div>
+        </div>
+      </div>
+      <div class="chat-messages">
+        <div class="chat-system">Stack: React &middot; Lua &middot; C++ &middot; Java</div>
+
+        <div class="chat-row chat-left">
+          <div class="chat-bubble chat-bubble-l">
+            <div class="chat-label">Performance</div>
+            <strong>Halved</strong> time-to-interactive on startup by batching and removing network requests on the critical path.
+          </div>
+        </div>
+
+        <div class="chat-row chat-left">
+          <div class="chat-bubble chat-bubble-l">
+            <div class="chat-label">Platform Stability</div>
+            Added retry mechanisms at common failure points &mdash; resulting in a <strong>+2% improvement</strong> in app startup success rate.
+          </div>
+        </div>
+        <div class="chat-img-row chat-left">
+          <div class="chat-img-wrap">
+            <img src="../static/roblox-error.webp" alt="Roblox error screen" class="chat-img">
+          </div>
+        </div>
+
+        <div class="chat-row chat-left">
+          <div class="chat-bubble chat-bubble-l">
+            <div class="chat-label">Growth &amp; Matchmaking</div>
+            Improved game-join success rate by <strong>+4%</strong> by identifying failure cases, redesigning UX routes, and adding in-game feedback toasts to reduce user confusion during loading.
+          </div>
+        </div>
+        <div class="chat-img-row chat-left">
+          <div class="chat-img-wrap">
+            <img src="../static/social_toast.png" alt="Social toast notification" class="chat-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="modal" id="modal-about" role="dialog" aria-modal="true" aria-label="About me">
+    <button class="modal-x modal-x-dark" aria-label="Close">&#x2715;</button>
+    <div class="big-note">
+      <h2 class="big-note-h">About Me</h2>
+      <p>Hi! I&rsquo;m Eric. I was a software engineer on the App and Growth teams at Roblox &mdash; I joined when there were about 800 people and left when there were 2500. I'm looking for an opportunity to join a smaller team where I can more directly impact the product.</p>
+      <p> I loved working at Roblox. It was awesome to work on something that gets used by so many users. Whenever I did something, good or bad, we heard about it on Twitter. It was awesome to work on a product that so many users enjoyed every day </p>
+      <p>After leaving, I crashed my car :&lt and had to take a break. I'm all recovered now! I've used the downtime to work on other projects I've wanted to tackle forever. I've worked on AI agents to support vibecoders, IRL games, and developed strategies to beat the house in Vegas.</p>
+      <p>I like working close to users, shipping fast, and feeling like my work has a real impact on people.</p>
+      <p> In my free time I like to travel, hike, and check out art museums</p>
+
+      <div class="about-scrapbook">
+        <figure class="about-scrap" style="--rot: -4deg">
+          <img src="../static/Hike.jpeg" alt="Hiking outdoors">
+        </figure>
+        <figure class="about-scrap" style="--rot: 3deg">
+          <img src="../static/Pyramids.jpeg" alt="The Pyramids">
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="modal" id="modal-projects" role="dialog" aria-modal="true" aria-label="Personal projects">
+    <button class="modal-x modal-x-dark" aria-label="Close">&#x2715;</button>
+    <div class="lined-paper">
+      <div class="lp-holes">
+        <div class="lp-hole"></div><div class="lp-hole"></div>
+        <div class="lp-hole"></div><div class="lp-hole"></div>
+      </div>
+      <div class="lp-content">
+        <h2 class="lp-title">Projects</h2>
+
+        <div class="proj-section">
+          <h3 class="proj-cat">Supporting Vibe Coders</h3>
+          <ul class="proj-lines">
+            <li><a href="https://github.com/Ericwimsatt/bulk-refactor" target="_blank" rel="noopener"><span class="proj-icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 2a4 4 0 0 0-3.9 4.9L4.5 12.5a1.5 1.5 0 0 0 2.1 2.1l5.6-5.6A4 4 0 1 0 14 2zm0 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" fill="#e76f51"/></svg></span><span class="proj-text"><strong>bulk-refactor</strong> &mdash; Toolkit to bring existing codebases up to current conventions. Combines deterministic refactors and agents to complete tasks across a codebase <em>(Python)</em></span></a></li>
+            <li><a href="https://github.com/Ericwimsatt/pseudo" target="_blank" rel="noopener"><span class="proj-icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="10" cy="10" rx="9" ry="5.5" stroke="#457b9d" stroke-width="1.5"/><circle cx="10" cy="10" r="2.5" fill="#457b9d"/><circle cx="10" cy="10" r="1" fill="white"/></svg></span><span class="proj-text"><strong>pseudo</strong> &mdash; Plain-English code viewer for less-technical users to get a deeper understanding of their codebases <em>(HTML / Python)</em></span></a></li>
+          </ul>
+        </div>
+
+        <div class="proj-section">
+          <h3 class="proj-cat">Fun</h3>
+          <ul class="proj-lines">
+            <li><a href="https://github.com/Ericwimsatt/manhunt" target="_blank" rel="noopener"><span class="proj-icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a5 5 0 0 0-5 5c0 3.5 5 11 5 11s5-7.5 5-11a5 5 0 0 0-5-5z" fill="#e63946"/><circle cx="10" cy="7" r="2" fill="white"/></svg></span><span class="proj-text"><strong>manhunt</strong> &mdash; Companion app for organizing a large scale game of manhunt in Golden Gate Park. <em>(React Native / TypeScript / Convex)</em></span></a></li>
+          </ul>
+        </div>
+
+        <div class="proj-section">
+          <h3 class="proj-cat">Card Games</h3>
+          <ul class="proj-lines">
+            <li><a href="https://github.com/Ericwimsatt/rockets" target="_blank" rel="noopener"><span class="proj-icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 2C7 2 5 6 5 9l2 2 1-1 1 4 1-4 1 1 2-2c0-3-2-7-5-7z" fill="#1d3557"/><path d="M7 11l-2 3h3m8-3l-3 3h3" stroke="#1d3557" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="7" r="1.2" fill="white"/></svg></span><span class="proj-text"><strong>rockets</strong> &mdash; Extends the Treys library to support complex simulations of poker hands and table games<em>(Python)</em></span></a></li>
+            <li><a href="https://github.com/Ericwimsatt/gamble" target="_blank" rel="noopener"><span class="proj-icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="11" height="15" rx="2" fill="#1d3557"/><rect x="7" y="2" width="11" height="15" rx="2" fill="white" stroke="#1d3557" stroke-width="1.2"/><text x="10.5" y="12" font-size="7" text-anchor="middle" fill="#e63946" font-family="serif" font-weight="bold">♠</text></svg></span><span class="proj-text"><strong>collusion</strong> &mdash; Strategy testing for poker and other table games <em>(Python)</em></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CAL DIPLOMA -->
+  <div class="modal" id="modal-cal" role="dialog" aria-modal="true" aria-label="UC Berkeley research">
+    <button class="modal-x modal-x-dark" aria-label="Close">&#x2715;</button>
+    <div class="diploma">
+      <div class="diploma-border">
+        <div class="diploma-inner">
+          <p class="dip-university">University of California, Berkeley</p>
+          <div class="dip-rule"></div>
+          <p class="dip-year">Class of 2021</p>
+          <div class="dip-rule"></div>
+          <div class="dip-honors">
+            <p class="dip-honors-title">Research</p>
+            <p><strong>PublicEditor</strong> &mdash; designed an annotator-consensus framework at <em>Public Editor</em> that is still cited widely in academic research.</p>
+            <p><strong>Genome sequencing performance</strong> &mdash; developed a memory-efficient bloom filter implementation for the <em>MetaHipMer</em> project.</p>
+          </div>
+          <div class="dip-rule"></div>
+          <div class="dip-honors dip-extracurriculars">
+            <p class="dip-honors-title">Extracurriculars</p>
+            <p>Triathlon Team &middot; Mentoring at Local Middle School &middot; Event Organizer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /overlay -->
+
+<script src="script.js"></script>
+</body>
+</html>
+</html>
