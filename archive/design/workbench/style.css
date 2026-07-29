@@ -1,0 +1,555 @@
+/* ═══════════════════════════════════════════
+   WORKBENCH PORTFOLIO
+   ═══════════════════════════════════════════ */
+
+/* ── Reset ──────────────────────────────── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+ul { list-style: none; }
+a { text-decoration: none; }
+
+/* ── Design Tokens ──────────────────────── */
+:root {
+  --yellow:   #fef9c3;
+  --orange:   #ffedd5;
+  --green:    #dcfce7;
+  --pink:     #ffe4e6;
+
+  --ink:      #1c1108;
+  --ink-mid:  #3b2a18;
+  --ink-lt:   #6b4d2e;
+  --wood:     #8b5a2b;
+
+  --hand: 'Caveat', cursive;
+  --sans: 'Inter', system-ui, sans-serif;
+
+  --sh1: 2px 4px 12px rgba(0,0,0,.22), 0 1px 3px rgba(0,0,0,.14);
+  --sh2: 5px 8px 24px rgba(0,0,0,.3),  0 2px 6px rgba(0,0,0,.18);
+  --sh3: 10px 16px 40px rgba(0,0,0,.38), 0 3px 8px rgba(0,0,0,.22);
+}
+
+/* ── Hardwood Table ─────────────────────── */
+body {
+  font-family: var(--hand);
+  color: var(--ink);
+  overflow-x: hidden;
+  min-height: 100vh;
+
+  background-color: #8c5a2a;
+  background-image:
+    /* Knot suggestions */
+    radial-gradient(ellipse 22% 6% at 14% 35%, rgba(35,12,3,.16) 0%, transparent 100%),
+    radial-gradient(ellipse 14% 4% at 78% 68%, rgba(35,12,3,.11) 0%, transparent 100%),
+    radial-gradient(ellipse 10% 3% at 55% 18%, rgba(35,12,3,.08) 0%, transparent 100%),
+    /* Fine horizontal grain */
+    repeating-linear-gradient(
+      90.35deg,
+      transparent 0, transparent 3px,
+      rgba(0,0,0,.016) 3px, rgba(0,0,0,.016) 4px,
+      transparent 4px, transparent 9px,
+      rgba(255,255,255,.011) 9px, rgba(255,255,255,.011) 10px,
+      transparent 10px, transparent 18px
+    ),
+    /* Medium grain bands */
+    repeating-linear-gradient(
+      89.68deg,
+      transparent 0, transparent 26px,
+      rgba(0,0,0,.022) 26px, rgba(0,0,0,.022) 28px,
+      transparent 28px, transparent 68px
+    ),
+    /* Plank color variation */
+    repeating-linear-gradient(
+      180deg,
+      #a06838 0px,   #8c5428 50px,
+      #b57840 50px,  #b57840 98px,
+      #8c5428 98px,  #8c5428 102px,
+      #c08848 102px, #c08848 168px,
+      #7a4a20 168px, #7a4a20 172px,
+      #a86c38 172px, #a86c38 248px,
+      #8c5428 248px, #8c5428 252px,
+      #b07040 252px, #b07040 330px,
+      #a06838 330px
+    );
+}
+
+/* Vignette + sheen */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 20%, rgba(255,200,100,.05) 0%, transparent 100%),
+    radial-gradient(ellipse 100% 100% at 50% 50%, transparent 55%, rgba(0,0,0,.22) 100%);
+}
+
+/* ── Workbench Container ────────────────── */
+.workbench {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 64px 48px 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+/* ── Sticky Note Base ───────────────────── */
+.note {
+  border-radius: 2px;
+  padding: 28px 30px;
+  position: relative;
+  font-family: var(--hand);
+  color: var(--ink);
+  display: block;
+  box-shadow: var(--sh2);
+  transition: box-shadow .2s ease;
+}
+
+/* Folded corner */
+.note::after {
+  content: '';
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 26px; height: 26px;
+  background: linear-gradient(225deg, rgba(0,0,0,.09) 50%, transparent 50%);
+  border-radius: 0 0 2px 0;
+}
+
+.note:hover { box-shadow: var(--sh3); }
+
+.yellow { background: linear-gradient(150deg, #fef9c3 0%, #fde047 100%); }
+.orange { background: linear-gradient(150deg, #ffedd5 0%, #fdba74 100%); }
+.green  { background: linear-gradient(150deg, #dcfce7 0%, #86efac 100%); }
+.pink   { background: linear-gradient(150deg, #ffe4e6 0%, #fda4af 100%); }
+
+/* ── Pushpin ────────────────────────────── */
+.pushpin {
+  position: absolute;
+  top: -11px; left: 50%;
+  transform: translateX(-50%);
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fca5a5 0%, #dc2626 40%, #991b1b 100%);
+  box-shadow: 0 2px 6px rgba(0,0,0,.45), inset 0 1px 2px rgba(255,255,255,.35);
+  z-index: 2;
+}
+
+.pushpin::after {
+  content: '';
+  position: absolute;
+  bottom: -8px; left: 50%;
+  transform: translateX(-50%);
+  width: 4px; height: 10px;
+  background: linear-gradient(to bottom, #7f1d1d, #450a0a);
+  border-radius: 0 0 3px 3px;
+}
+
+/* ── Tape ───────────────────────────────── */
+.tape {
+  position: absolute;
+  top: -10px; left: 50%;
+  transform: translateX(-50%);
+  width: 58px; height: 20px;
+  background: rgba(254, 249, 195, .6);
+  border-left: 2px solid rgba(202, 138, 4, .22);
+  border-right: 2px solid rgba(202, 138, 4, .22);
+  border-radius: 2px;
+  backdrop-filter: blur(1px);
+}
+
+/* ── Top Row ────────────────────────────── */
+.top-row {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 44px;
+  align-items: start;
+}
+
+/* ── Hero Note ──────────────────────────── */
+.hero { padding: 38px 42px 34px; margin-top: 16px; }
+
+.hero h1 {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.hero .subtitle {
+  font-size: 1.3rem;
+  color: var(--ink-mid);
+  margin-top: 4px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 18px 0 16px;
+}
+
+.chips li {
+  background: rgba(0,0,0,.1);
+  border-radius: 20px;
+  padding: 3px 14px;
+  font-family: var(--sans);
+  font-size: .88rem;
+  font-weight: 500;
+  color: var(--ink-mid);
+}
+
+.blurb {
+  font-size: 1.12rem;
+  line-height: 1.75;
+  color: var(--ink-mid);
+  margin-bottom: 22px;
+}
+
+.note-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 18px;
+  border-top: 1.5px dashed rgba(0,0,0,.15);
+}
+
+.note-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--hand);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: rgba(0,0,0,.08);
+  padding: 5px 14px;
+  border-radius: 20px;
+  transition: background .15s;
+}
+
+.note-nav a:hover { background: rgba(0,0,0,.16); }
+
+/* ── About Note ─────────────────────────── */
+.about { margin-top: 56px; }
+
+.about h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.about p {
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: var(--ink-mid);
+  margin-bottom: 10px;
+}
+
+.location {
+  margin-top: 10px;
+  font-size: .98rem;
+  color: var(--ink-lt);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ── Legal Pad (Experience) ─────────────── */
+.legal-pad {
+  display: flex;
+  border-radius: 3px;
+  background: #fffef6;
+  overflow: hidden;
+  box-shadow: var(--sh2);
+  transition: box-shadow .2s ease;
+}
+
+.legal-pad:hover { box-shadow: var(--sh3); }
+
+.rings {
+  width: 38px;
+  background: #e8e6dc;
+  border-right: 1px solid #d4d0c4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 24px 0;
+  flex-shrink: 0;
+}
+
+.rings span {
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  border: 3px solid #b4b0a4;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.08);
+}
+
+.pad-inner {
+  flex: 1;
+  padding: 32px 44px;
+  background-image:
+    /* Red margin line */
+    linear-gradient(to right, transparent 59px, #fca5a5 59px, #fca5a5 61px, transparent 61px),
+    /* Horizontal ruling */
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0, transparent 30px,
+      rgba(147,210,255,.45) 30px, rgba(147,210,255,.45) 31px
+    );
+  background-size: 100% 31px;
+}
+
+.pad-heading {
+  font-family: var(--hand);
+  font-size: 2rem;
+  font-weight: 700;
+  padding-left: 72px;
+  margin-bottom: 28px;
+}
+
+.job {
+  padding-left: 72px;
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  border-bottom: 1px dashed rgba(0,0,0,.09);
+}
+
+.job:last-child { border-bottom: none; margin-bottom: 0; }
+
+.job-top {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.job-top strong {
+  font-family: var(--hand);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.job-top em {
+  font-family: var(--sans);
+  font-style: normal;
+  font-size: .85rem;
+  color: var(--ink-lt);
+}
+
+.job ul { margin-bottom: 12px; }
+
+.job li {
+  font-family: var(--hand);
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--ink-mid);
+  padding-left: 18px;
+  position: relative;
+}
+
+.job li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--ink-lt);
+}
+
+.tags { display: flex; flex-wrap: wrap; gap: 5px; }
+
+.tags span {
+  font-family: var(--sans);
+  font-size: .75rem;
+  font-weight: 500;
+  background: rgba(0,0,0,.06);
+  border-radius: 10px;
+  padding: 2px 10px;
+  color: var(--ink-mid);
+}
+
+/* ── Projects Section ───────────────────── */
+.proj-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--hand);
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: rgba(255,255,255,.78);
+  text-shadow: 1px 2px 5px rgba(0,0,0,.45);
+  margin-bottom: 22px;
+}
+
+.proj-header i { color: #ef4444; font-size: 1.1rem; }
+
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 26px;
+}
+
+/* ── Project Sticky Note ────────────────── */
+.proj { padding: 22px 24px; cursor: pointer; }
+
+.proj-icon {
+  font-size: 1.75rem;
+  display: block;
+  margin-bottom: 12px;
+  color: var(--ink-mid);
+}
+
+.proj h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.proj p {
+  font-size: .98rem;
+  line-height: 1.65;
+  color: var(--ink-mid);
+  margin-bottom: 14px;
+}
+
+.proj-lang {
+  font-family: var(--sans);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  background: rgba(0,0,0,.1);
+  border-radius: 10px;
+  padding: 3px 10px;
+  color: var(--ink-mid);
+}
+
+/* ── Bottom Row ─────────────────────────── */
+.bottom-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: center;
+}
+
+/* ── Business Card (Contact) ────────────── */
+.business-card {
+  background: #fffef8;
+  border-radius: 6px;
+  padding: 30px 34px;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--sh3);
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow .2s ease;
+}
+
+.business-card:hover { box-shadow: 14px 20px 50px rgba(0,0,0,.44), 0 4px 10px rgba(0,0,0,.25); }
+
+.card-accent {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 8px;
+  background: linear-gradient(180deg, #b07040, #8c5428, #b07040);
+}
+
+.card-left {
+  padding-left: 18px;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.card-icon { font-size: 2.8rem; color: var(--wood); }
+
+.card-tagline {
+  font-family: var(--hand);
+  font-size: .95rem;
+  color: var(--wood);
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.card-sep {
+  width: 1px;
+  height: 90px;
+  background: rgba(0,0,0,.12);
+  margin: 0 30px;
+  flex-shrink: 0;
+}
+
+.card-right { flex: 1; }
+
+.card-name {
+  font-family: var(--hand);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.card-role {
+  font-family: var(--sans);
+  font-size: .85rem;
+  color: var(--ink-lt);
+  margin-bottom: 16px;
+}
+
+.card-links { display: flex; flex-direction: column; gap: 7px; }
+.card-links li { display: flex; }
+
+.card-links a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--sans);
+  font-size: .88rem;
+  color: var(--ink-mid);
+  transition: color .15s;
+}
+
+.card-links a:hover { color: var(--wood); }
+.card-links i { width: 16px; color: var(--wood); }
+
+/* ── GitHub Sticky Note ─────────────────── */
+.gh-note {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 28px 38px;
+  gap: 12px;
+}
+
+.gh-icon { font-size: 3rem; color: var(--ink); display: block; }
+.gh-label { font-size: 1.1rem; font-weight: 600; color: var(--ink-mid); }
+
+/* ── Responsive ─────────────────────────── */
+@media (max-width: 960px) {
+  .workbench { padding: 40px 24px 80px; gap: 36px; }
+  .top-row { grid-template-columns: 1fr; }
+  .about { margin-top: 0; }
+  .bottom-row { grid-template-columns: 1fr; }
+  .gh-note { flex-direction: row; padding: 22px 28px; }
+  .business-card { flex-wrap: wrap; }
+  .card-sep { display: none; }
+  .pad-inner { padding: 24px 20px 24px 24px; }
+  .pad-heading, .job { padding-left: 0; }
+}
+
+@media (max-width: 600px) {
+  .hero h1 { font-size: 2.4rem; }
+  .proj-grid { grid-template-columns: 1fr 1fr; }
+  .workbench { padding: 30px 16px 60px; }
+}
+
+@media (max-width: 400px) {
+  .proj-grid { grid-template-columns: 1fr; }
+}

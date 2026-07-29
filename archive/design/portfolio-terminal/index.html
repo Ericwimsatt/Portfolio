@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EW :: Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+  <!-- SCANLINES overlay -->
+  <div class="scanlines" aria-hidden="true"></div>
+  <!-- CRT vignette -->
+  <div class="crt-vignette" aria-hidden="true"></div>
+
+  <div class="monitor-frame">
+    <div class="monitor-screen">
+
+      <div class="terminal-wrap">
+
+        <!-- BOOT SEQUENCE -->
+        <div class="boot-block" id="boot">
+          <p class="boot-line" style="--d:0s">EW-OS v2.4.1 BIOS  &nbsp;[OK]</p>
+          <p class="boot-line" style="--d:.3s">Initializing RAM ... 64K     &nbsp;[OK]</p>
+          <p class="boot-line" style="--d:.6s">Loading portfolio.dat ...    &nbsp;[OK]</p>
+          <p class="boot-line" style="--d:.9s">Mounting /dev/brain ...      &nbsp;[OK]</p>
+          <p class="boot-line" style="--d:1.2s">────────────────────────────────────────</p>
+          <p class="boot-line prompt-line" style="--d:1.5s">WELCOME. TYPE <span class="key">HELP</span> TO LIST COMMANDS.</p>
+        </div>
+
+        <!-- NAV BAR -->
+        <nav class="term-nav">
+          <a href="#about" class="term-cmd">ABOUT</a>
+          <a href="#experience" class="term-cmd">EXPERIENCE</a>
+          <a href="#projects" class="term-cmd">PROJECTS</a>
+          <a href="#contact" class="term-cmd">CONTACT</a>
+          <a href="https://github.com/Ericwimsatt" target="_blank" class="term-cmd">GITHUB ↗</a>
+        </nav>
+
+        <!-- ABOUT -->
+        <section id="about" class="term-section">
+          <div class="prompt-row"><span class="prompt">$</span> <span class="cmd">cat about.txt</span></div>
+          <div class="output-block">
+            <p class="big-ascii">ERIC WIMSATT</p>
+            <p class="term-sub">Software Engineer  ·  San Francisco, CA</p>
+            <br/>
+            <p class="term-p">
+              Former Roblox engineer. Joined when headcount was
+              <span class="hl">~800</span>, left at <span class="hl">~2,500</span>.
+              Looking for a smaller team where I can own more of the product
+              and ship at startup velocity.
+            </p>
+            <br/>
+            <p class="term-p">
+              Core stack: <span class="hl">React · TypeScript · Python · C++ · Lua</span>
+            </p>
+          </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="experience" class="term-section">
+          <div class="prompt-row"><span class="prompt">$</span> <span class="cmd">ls -la ./experience</span></div>
+          <div class="output-block">
+
+            <div class="term-job" tabindex="0">
+              <p class="term-job-header">
+                <span class="fname">roblox/</span>
+                <span class="fmeta">SWE Growth &nbsp; Jul 2021 – Jul 2024</span>
+              </p>
+              <p class="ftech">React · Lua · C++ · Java</p>
+              <ul class="term-bullets">
+                <li><span class="hl">-50%</span> time-to-interactive on app startup via network request optimization.</li>
+                <li><span class="hl">+2%</span> startup success rate with targeted retry mechanisms.</li>
+                <li><span class="hl">+4%</span> game-join success rate through redesigned failure routes + in-game toasts.</li>
+              </ul>
+            </div>
+
+            <div class="term-job" tabindex="0">
+              <p class="term-job-header">
+                <span class="fname">public-editor/</span>
+                <span class="fmeta">SWE &nbsp; Jan 2018 – Feb 2022</span>
+              </p>
+              <p class="ftech">Python · Numpy · Pandas</p>
+              <ul class="term-bullets">
+                <li>Built data pipelines for a misinformation-tracking platform.</li>
+                <li>Annotator consensus framework still cited in academic research.</li>
+              </ul>
+            </div>
+
+            <div class="term-job" tabindex="0">
+              <p class="term-job-header">
+                <span class="fname">personal-projects/</span>
+                <span class="fmeta">Independent &nbsp; Jul 2024 – Present</span>
+              </p>
+              <p class="ftech">React · TypeScript · Python · Flask</p>
+              <ul class="term-bullets">
+                <li>Active side-project development post-accident recovery.</li>
+              </ul>
+            </div>
+
+            <div class="term-job" tabindex="0">
+              <p class="term-job-header">
+                <span class="fname">uc-berkeley/</span>
+                <span class="fmeta">B.S. Computer Science &nbsp; Class of 2021</span>
+              </p>
+              <ul class="term-bullets">
+                <li>Research: GPU bloom filter for bulk genome sequencing (MetaHipMer).</li>
+              </ul>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="term-section">
+          <div class="prompt-row"><span class="prompt">$</span> <span class="cmd">ls ./projects --pinned</span></div>
+          <div class="output-block">
+            <div class="proj-grid">
+
+              <a href="https://github.com/Ericwimsatt/bulk-refactor" target="_blank" class="proj-tile">
+                <div class="proj-icon">🛠</div>
+                <div class="proj-body">
+                  <p class="proj-title">bulk-refactor</p>
+                  <p class="proj-badge">Python</p>
+                  <p class="proj-desc">CLI toolkit for repetitive codebase-wide refactors with AI fallback.</p>
+                  <div class="proj-img-ph">[ no preview ]</div>
+                </div>
+              </a>
+
+              <a href="https://github.com/Ericwimsatt/manhunt" target="_blank" class="proj-tile">
+                <div class="proj-icon">🗺</div>
+                <div class="proj-body">
+                  <p class="proj-title">manhunt</p>
+                  <p class="proj-badge">HTML / TS</p>
+                  <p class="proj-desc">Real-time companion app for a city-scale manhunt in Golden Gate Park.</p>
+                  <div class="proj-img-ph">[ no preview ]</div>
+                </div>
+              </a>
+
+              <a href="https://github.com/Ericwimsatt/rockets" target="_blank" class="proj-tile">
+                <div class="proj-icon">🃏</div>
+                <div class="proj-body">
+                  <p class="proj-title">rockets</p>
+                  <p class="proj-badge">Python</p>
+                  <p class="proj-desc">Extended Treys poker library — PLO support & advanced simulations.</p>
+                  <div class="proj-img-ph">[ no preview ]</div>
+                </div>
+              </a>
+
+              <a href="https://github.com/Ericwimsatt/pseudo" target="_blank" class="proj-tile">
+                <div class="proj-icon">📖</div>
+                <div class="proj-body">
+                  <p class="proj-title">pseudo <span class="wip-flag">[WIP]</span></p>
+                  <p class="proj-badge">HTML / Python</p>
+                  <p class="proj-desc">Plain-English code viewer for non-technical readers.</p>
+                  <div class="proj-img-ph">[ no preview ]</div>
+                </div>
+              </a>
+
+              <a href="https://github.com/Ericwimsatt/gamble" target="_blank" class="proj-tile">
+                <div class="proj-icon">🎲</div>
+                <div class="proj-body">
+                  <p class="proj-title">gamble</p>
+                  <p class="proj-badge">Python</p>
+                  <p class="proj-desc">Poker hand equity tools for better in-game decisions.</p>
+                  <div class="proj-img-ph">[ no preview ]</div>
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="term-section">
+          <div class="prompt-row"><span class="prompt">$</span> <span class="cmd">cat contact.cfg</span></div>
+          <div class="output-block contact-grid">
+            <p><span class="cfg-key">EMAIL</span><span class="cfg-sep"> = </span><a href="mailto:ericwimsatt@gmail.com" class="cfg-val">ericwimsatt@gmail.com</a></p>
+            <p><span class="cfg-key">PHONE</span><span class="cfg-sep"> = </span><span class="cfg-val">(760) 402-5406</span></p>
+            <p><span class="cfg-key">GITHUB</span><span class="cfg-sep"> = </span><a href="https://github.com/Ericwimsatt" target="_blank" class="cfg-val">github.com/Ericwimsatt</a></p>
+            <p><span class="cfg-key">LOCATION</span><span class="cfg-sep"> = </span><span class="cfg-val">San Francisco, CA</span></p>
+          </div>
+        </section>
+
+        <div class="cursor-line">
+          <span class="prompt">$</span> <span class="blink-cursor">█</span>
+        </div>
+
+      </div><!-- /terminal-wrap -->
+    </div><!-- /monitor-screen -->
+
+    <div class="monitor-bezel">
+      <div class="monitor-stand-top"></div>
+    </div>
+  </div><!-- /monitor-frame -->
+
+  <div class="monitor-base-wrap">
+    <div class="monitor-neck"></div>
+    <div class="monitor-base"></div>
+  </div>
+
+</body>
+</html>
