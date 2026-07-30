@@ -1,0 +1,24 @@
+{% extends "templates/base.njk" %}
+
+{% block body %}
+<div class="page-shell">
+
+  {% include "components/hero.njk" %}
+
+  <main class="desk-grid">
+    {% include "components/desk-items/roblox.njk" %}
+    {% include "components/desk-items/about.njk" %}
+    {% include "components/desk-items/projects.njk" %}
+    {% include "components/desk-items/cal.njk" %}
+    {% include "components/desk-items/contact.njk" %}
+  </main>
+
+</div><!-- /page-shell -->
+
+<div class="overlay" id="overlay" aria-hidden="true">
+  {% include "components/modals/roblox.njk" %}
+  {% include "components/modals/about.njk" %}
+  {% include "components/modals/projects.njk" %}
+  {% include "components/modals/cal.njk" %}
+</div><!-- /overlay -->
+{% endblock %}

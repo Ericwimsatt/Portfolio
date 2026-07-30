@@ -1,0 +1,14 @@
+{#
+  Reusable modal shell.
+  Usage:
+    {% from "components/modals/_base.njk" import modal %}
+    {% call modal("modal-about", "About me", darkClose=true) %}
+      ...inner content...
+    {% endcall %}
+#}
+{% macro modal(modalId, label, darkClose=false) %}
+<div class="modal" id="{{ modalId }}" role="dialog" aria-modal="true" aria-label="{{ label }}">
+  <button class="modal-x{% if darkClose %} modal-x-dark{% endif %}" aria-label="Close">&#x2715;</button>
+  {{ caller() }}
+</div>
+{% endmacro %}

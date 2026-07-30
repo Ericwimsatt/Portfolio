@@ -1,0 +1,16 @@
+{% from "components/desk-items/_button.njk" import deskButton %}
+{% call deskButton("modal-projects", "Personal projects") %}
+<div class="nb-item">
+  <div class="nb-rings-side">
+    <span></span><span></span><span></span>
+    <span></span><span></span><span></span>
+  </div>
+  <div class="nb-cover-face">
+    <div class="nb-label-area">
+      <p class="nb-subject-text">Fun</p>
+      <p class="nb-title-text">Projects</p>
+    </div>
+    <div class="nb-rule"></div>
+  </div>
+</div>
+{% endcall %}

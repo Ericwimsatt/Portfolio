@@ -1,27 +1,20 @@
 const fs = require('fs');
 const path = require('path');
+const nunjucks = require('nunjucks');
 
-const COMPONENTS_DIR = path.join(__dirname, 'components');
-const TEMPLATE_FILE = path.join(__dirname, 'template.html');
-const OUTPUT_FILE = path.join(__dirname, 'deploy', 'index.html');
+const ROOT = __dirname;
+const OUTPUT_FILE = path.join(ROOT, 'deploy', 'index.html');
 
-const includeRe = /\{\{include:([a-zA-Z0-9_-]+)\}\}/g;
+// Configure nunjucks with the project root as the search path.
+// This means all include/extends paths are relative to the repo root,
+// e.g. "templates/base.njk", "components/modals/roblox.njk".
+nunjucks.configure(ROOT, {
+  autoescape: false,   // we're outputting raw HTML — don't escape it
+  trimBlocks: false,
+  lstripBlocks: false,
+  noCache: true,
+});
 
-function resolveInclude(match, name) {
-  const filePath = path.join(COMPONENTS_DIR, name + '.html');
-  if (!fs.existsSync(filePath)) {
-    console.error(`Warning: component "${name}" not found at ${filePath}`);
-    return `<!-- MISSING COMPONENT: ${name} -->`;
-  }
-  const content = fs.readFileSync(filePath, 'utf8');
-  return content.replace(includeRe, resolveInclude);
-}
-
-function build() {
-  let template = fs.readFileSync(TEMPLATE_FILE, 'utf8');
-  let result = template.replace(includeRe, resolveInclude);
-  fs.writeFileSync(OUTPUT_FILE, result, 'utf8');
-  console.log(`Built → ${OUTPUT_FILE}`);
-}
-
-build();
+const html = nunjucks.render('templates/index.njk');
+fs.writeFileSync(OUTPUT_FILE, html, 'utf8');
+console.log(`Built → ${path.relative(ROOT, OUTPUT_FILE)}`);

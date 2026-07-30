@@ -1,0 +1,69 @@
+{
+  "name": "Eric Wimsatt Portfolio",
+  "northStar": "The Living Veduta",
+  "mode": "Experience",
+  "imageStrategy": {
+    "primary": "Huge public-domain Venetian art images with text overlaid directly on image.",
+    "sources": [
+      {
+        "label": "Canaletto, The Grand Canal, Venice, Looking Southeast, with the Campo della Carita to the Right",
+        "url": "https://www.metmuseum.org/art/collection/search/438102",
+        "image": "https://images.metmuseum.org/CRDImages/ep/original/Wrightsman18.jpg",
+        "rights": "Public Domain / CC0 via The Met and Wikimedia Commons"
+      },
+      {
+        "label": "Canaletto, The Grand Canal, Venice, Looking South toward the Rialto Bridge",
+        "url": "https://www.metmuseum.org/art/collection/search/438100",
+        "image": "https://images.metmuseum.org/CRDImages/ep/original/Wrightsman16.jpg",
+        "rights": "Public Domain / CC0 via The Met and Wikimedia Commons"
+      },
+      {
+        "label": "Canaletto, Campo Sant'Angelo, Venice",
+        "url": "https://commons.wikimedia.org/wiki/File:Canaletto_(Giovanni_Antonio_Canal)_-_Campo_Sant%27Angelo,_Venice_-_2019.141.5_-_Metropolitan_Museum_of_Art.jpg",
+        "image": "https://images.metmuseum.org/CRDImages/ep/original/Wrightsman19.jpg",
+        "rights": "Public Domain / CC0 via The Met and Wikimedia Commons"
+      }
+    ],
+    "rules": [
+      "Art owns at least 60% of hero and feature surfaces.",
+      "Overlay copy lands in quiet image areas and stays caption-scaled.",
+      "Every artwork used in production gets a visible or accessible source note."
+    ]
+  },
+  "tokens": {
+    "colors": {
+      "canalSky": "#b9d8dc",
+      "canalWater": "#2f6f78",
+      "lagoonTeal": "#4c8790",
+      "venetianStone": "#ede1c9",
+      "agedPaper": "#fff8e8",
+      "brickVermilion": "#aa553d",
+      "ink": "#1d2523",
+      "inkMuted": "#53615d"
+    },
+    "shadow": {
+      "mountedPlate": "0 26px 60px rgba(29, 37, 35, 0.22)",
+      "captionLift": "0 14px 34px rgba(29, 37, 35, 0.16)"
+    },
+    "motion": {
+      "duration": "700ms",
+      "easing": "cubic-bezier(.16, 1, .3, 1)",
+      "signature": "Subtle image crop shift plus waterline/caption parallax."
+    }
+  },
+  "components": {
+    "artPlate": {
+      "description": "Full-bleed or large framed artwork with inner mat line and optional image scrim.",
+      "css": ".art-plate{position:relative;overflow:hidden;background-size:cover;background-position:center;box-shadow:0 26px 60px rgba(29,37,35,.22)}.art-plate::after{content:\"\";position:absolute;inset:14px;border:1px solid rgba(255,248,232,.44);pointer-events:none}"
+    },
+    "captionPlate": {
+      "description": "Small readable overlay for project facts and source notes.",
+      "css": ".caption-plate{background:rgba(255,248,232,.9);color:#1d2523;border:1px solid rgba(29,37,35,.26);box-shadow:0 14px 34px rgba(29,37,35,.16);padding:18px;max-width:420px}"
+    },
+    "evidenceLedger": {
+      "description": "Ruled mono rows for exact proof.",
+      "css": ".evidence-ledger{display:grid}.evidence-ledger span{display:flex;justify-content:space-between;border-top:1px solid currentColor;padding:10px 0;font:500 12px/1.5 'SFMono-Regular',Consolas,monospace;text-transform:uppercase}"
+    }
+  }
+}
+

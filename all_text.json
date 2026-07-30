@@ -1,0 +1,107 @@
+{
+  "personal": {
+    "name": "Eric Wimsatt",
+    "tagline": "builder   explorer   engineer",
+    "subtagline": "it's not ai slop when I do it",
+    "email": "ericwimsatt@gmail.com",
+    "github": "https://github.com/Ericwimsatt",
+    "location": "San Francisco, CA"
+  },
+  "experience": [
+    {
+      "company": "Roblox",
+      "role": "Software Engineer, Growth",
+      "period": "Jul 2021 – Jul 2024",
+      "stack": ["React", "Lua", "C++", "Java"],
+      "highlights": [
+        {
+          "label": "Performance",
+          "text": "Halved time-to-interactive on startup by batching and removing network requests on the critical path."
+        },
+        {
+          "label": "Platform Stability",
+          "text": "Added retry mechanisms at common failure points — resulting in a +2% improvement in app startup success rate."
+        },
+        {
+          "label": "Growth & Matchmaking",
+          "text": "Improved game-join success rate by +4% by identifying failure cases, redesigning UX routes, and adding in-game feedback toasts to reduce user confusion during loading."
+        }
+      ]
+    }
+  ],
+  "about": {
+    "summary": "Hi! I'm Eric. I was a software engineer on the App and Growth teams at Roblox — I joined when there were about 800 people and left when there were 2500. I'm looking for an opportunity to join a smaller team where I can more directly impact the product.",
+    "paragraphs": [
+      "I loved being at Roblox. I got to learn from and work with the smartest people I've ever met. It was awesome to work on something that so many users loved.",
+      "I left because I wanted to join or start a startup. Unfortunately those plans were delayed when I crashed my car :<. I'm all recovered now! I've been traveling and enjoying some rest. I used the downtime to work on other projects I've wanted to tackle forever: AI agents to support vibecoders, IRL games, and some math projects.",
+      "I like working close to users, shipping fast, and feeling like my work has a real impact on people."
+    ],
+    "hobbies": ["travel", "swim", "art museums"],
+    "photos": [
+      {
+        "file": "static/Hike.jpeg",
+        "context": "Hiking outdoors"
+      },
+      {
+        "file": "static/Pyramids.jpeg",
+        "context": "The Pyramids"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "name": "bulk-refactor",
+      "category": "Supporting Vibe Coders",
+      "description": "Toolkit to bring existing codebases up to current conventions. Combines deterministic refactors and agents to complete tasks.",
+      "tech": ["Python"],
+      "url": "https://github.com/Ericwimsatt/bulk-refactor"
+    },
+    {
+      "name": "pseudo",
+      "category": "Supporting Vibe Coders",
+      "description": "Plain-English code viewer. Gives less-technical users a deeper understanding of their codebases.",
+      "tech": ["React", "Typescript", "Electron"],
+      "url": "https://github.com/Ericwimsatt/pseudo"
+    },
+    {
+      "name": "manhunt",
+      "category": "Fun",
+      "description": "Companion app for a large scale game of manhunt in Golden Gate Park.",
+      "tech": ["React Native", "TypeScript", "Convex"],
+      "url": "https://github.com/Ericwimsatt/manhunt"
+    },
+    {
+      "name": "rockets",
+      "category": "Card Games",
+      "description": "Extends the Treys library to support complex simulations of poker hands and table games.",
+      "tech": ["Python"],
+      "url": "https://github.com/Ericwimsatt/rockets"
+    },
+    {
+      "name": "collusion",
+      "category": "Card Games",
+      "description": "Strategy testing for poker and other table games.",
+      "tech": ["Python"],
+      "url": "https://github.com/Ericwimsatt/gamble"
+    }
+  ],
+  "education": {
+    "university": "University of California, Berkeley",
+    "class_of": "2021",
+    "research": [
+      {
+        "title": "Gene Sequencing",
+        "description": "Researched more performant DNA sequencing techniques to enable bulk analysis. Worked on a memory-efficient bloom filter implementation."
+      },
+      {
+        "title": "PublicEditor",
+        "description": "Created a tool to identify and label misinformation. Designed an annotator-consensus framework that is still used in academic research."
+      }
+    ],
+    "extracurriculars": "D1 Triathlete · Mentor at Local Middle School · Event Organizer"
+  },
+  "resume": {
+    "route": "/resume",
+    "pdf": "Eric_Wimsatt_resume.pdf"
+  }
+}

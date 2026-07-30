@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="Generated perspective scrim overlay">
+  <defs>
+    <linearGradient id="fade" x1="0" x2="1">
+      <stop offset="0" stop-color="#ede1c9" stop-opacity=".16"/>
+      <stop offset=".55" stop-color="#1d2523" stop-opacity=".05"/>
+      <stop offset="1" stop-color="#1d2523" stop-opacity=".24"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#fade)"/>
+  <g fill="none" stroke="#fff8e8" stroke-opacity=".24">
+    <path d="M0 1000 820 390 1600 1000"/>
+    <path d="M150 1000 820 390 1450 1000"/>
+    <path d="M310 1000 820 390 1290 1000"/>
+    <path d="M0 760h1600M0 620h1600M0 510h1600"/>
+  </g>
+</svg>
+

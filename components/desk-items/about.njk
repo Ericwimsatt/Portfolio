@@ -1,0 +1,11 @@
+{% from "components/desk-items/_button.njk" import deskButton %}
+{% call deskButton("modal-about", "About me") %}
+<div class="photo-frame-wrap">
+  <div class="pf-outer">
+    <div class="pf-mat">
+      <img src="static/headshot.jpeg" alt="Eric Wimsatt" class="pf-img">
+    </div>
+  </div>
+  <div class="pf-stand"></div>
+</div>
+{% endcall %}

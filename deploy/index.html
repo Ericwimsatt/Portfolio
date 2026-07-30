@@ -1,336 +1,776 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eric Wimsatt</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="static/favicon.svg">
-  <link rel="stylesheet" href="style.css">
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Eric Wimsatt is a product engineer in San Francisco with Roblox experience, frontend craft, and published projects." />
+    <title>Eric Wimsatt - Product Engineer</title>
+    <style>
+      :root {
+        --canal-sky: #b9d8dc;
+        --canal-water: #2f6f78;
+        --lagoon-teal: #4c8790;
+        --venetian-stone: #ede1c9;
+        --aged-paper: #fff8e8;
+        --brick: #aa553d;
+        --ink: #1d2523;
+        --ink-muted: #53615d;
+        --line: rgba(29, 37, 35, 0.2);
+        --paper-line: rgba(255, 248, 232, 0.34);
+        --gallery-shadow: rgba(29, 37, 35, 0.22);
+        --shadow-plate: 0 26px 70px rgba(29, 37, 35, 0.22);
+        --shadow-caption: 0 14px 34px rgba(29, 37, 35, 0.16);
+        --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        --font-serif: Georgia, "Times New Roman", serif;
+        --font-mono: "SFMono-Regular", "Cascadia Code", Consolas, monospace;
+      }
 
-<body>
+      * {
+        box-sizing: border-box;
+      }
 
-<div class="page-shell">
+      html {
+        scroll-behavior: smooth;
+      }
 
-  <header class="hero">
-  <div class="tape-stack">
-    <div class="tape-name">
-      <div class="tape-bg" aria-hidden="true"></div>
-      Eric Wimsatt
-    </div>
-    <div class="tape-sub">
-      <div class="tape-bg" aria-hidden="true"></div>
-      <strong>builder &nbsp; explorer &nbsp; engineer</strong>
-    </div>
-    <div class="tape-sub2">
-      <div class="tape-bg" aria-hidden="true"></div>
-      it&rsquo;s not ai slop when I do it
-    </div>
-  </div>
-  <a href="https://github.com/Ericwimsatt" target="_blank" rel="noopener" class="cat-link" title="GitHub @Ericwimsatt">
-    <svg class="cat-svg" viewBox="0 0 178 88" xmlns="http://www.w3.org/2000/svg" aria-label="Purple cat laying down — GitHub">
-      <!-- Tail (behind body, curling up from right) -->
-      <path d="M158 57 Q180 37 170 14 Q165 4 171 -1" stroke="#2b1166" stroke-width="9" fill="none" stroke-linecap="round"/>
-      <!-- Body (loaf) -->
-      <ellipse cx="115" cy="60" rx="46" ry="23" fill="#2b1166"/>
-      <!-- Paws (back, peeking from rear of body) -->
-      <ellipse cx="129" cy="81" rx="13" ry="7" fill="#361877"/>
-      <ellipse cx="150" cy="81" rx="13" ry="7" fill="#361877"/>
-      <!-- Body–back-paw separator crease -->
-      <path d="M117 75 Q139 72 161 75" stroke="#3b0764" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-      <!-- Paws (front, peeking from under body) -->
-      <ellipse cx="80" cy="78" rx="13" ry="7" fill="#361877"/>
-      <ellipse cx="101" cy="79" rx="13" ry="7" fill="#361877"/>
-      <!-- Body–paw separator crease -->
-      <path d="M68 72 Q90 69 116 72" stroke="#3b0764" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-      <!-- Neck (bridges head and body) -->
-      <ellipse cx="76" cy="55" rx="10" ry="13" fill="#2b1166"/>
-      <!-- Head (left of body) -->
-      <circle cx="50" cy="40" r="27" fill="#2b1166"/>
-      <!-- Head–body neck crease -->
-      <path d="M78 46 Q85 55 77 65" stroke="#3b0764" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-      <!-- Ear L -->
-      <polygon points="30,26 24,8 44,22" fill="#2b1166"/>
-      <polygon points="32,24 28,11 42,21" fill="#361877"/>
-      <!-- Ear R -->
-      <polygon points="70,26 76,8 60,22" fill="#2b1166"/>
-      <polygon points="68,24 73,11 62,21" fill="#361877"/>
-      <!-- Eyes -->
-      <ellipse cx="42" cy="38" rx="5.5" ry="6.5" fill="#10b981"/>
-      <ellipse cx="60" cy="38" rx="5.5" ry="6.5" fill="#10b981"/>
-      <ellipse cx="42" cy="39" rx="2.2" ry="4.8" fill="#111"/>
-      <ellipse cx="60" cy="39" rx="2.2" ry="4.8" fill="#111"/>
-      <circle cx="44" cy="36" r="1.4" fill="white"/>
-      <circle cx="62" cy="36" r="1.4" fill="white"/>
-      <!-- Nose -->
-      <polygon points="51,47 47,51 55,51" fill="#f0abfc"/>
-      <!-- Mouth -->
-      <path d="M46 53 Q51 57 56 53" stroke="#5b2284" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-      <!-- Whiskers L -->
-      <line x1="2"  y1="46" x2="44" y2="48" stroke="rgba(255,255,255,0.85)" stroke-width="1.2"/>
-      <line x1="2"  y1="52" x2="44" y2="52" stroke="rgba(255,255,255,0.85)" stroke-width="1.2"/>
-      <!-- Whiskers R -->
-      <line x1="84" y1="46" x2="58" y2="48" stroke="rgba(255,255,255,0.85)" stroke-width="1.2"/>
-      <line x1="84" y1="52" x2="58" y2="52" stroke="rgba(255,255,255,0.85)" stroke-width="1.2"/>
-    </svg>
-  </a>
-</header>
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
 
+      body {
+        margin: 0;
+        background: var(--venetian-stone);
+        color: var(--ink);
+        font-family: var(--font-sans);
+        line-height: 1.55;
+      }
 
-  <main class="desk-grid">
+      a {
+        color: inherit;
+      }
 
-  <!-- ① Roblox R6 character lying on desk -->
-  <button class="desk-item" data-modal="modal-roblox" aria-label="Roblox experience">
-    <div class="r6-wrap">
-      <div class="r6">
-        <div class="r6-head"></div>
-        <div class="r6-body-row">
-          <div class="r6-arm r6-arm-l"></div>
-          <div class="r6-torso"></div>
-          <div class="r6-arm r6-arm-r"></div>
-        </div>
-        <div class="r6-leg-row">
-          <div class="r6-leg"></div>
-          <div class="r6-leg"></div>
-        </div>
-      </div>
-    </div>
-  </button>
+      a:focus-visible {
+        outline: 2px solid var(--brick);
+        outline-offset: 4px;
+      }
 
-  <!-- ② About — framed photo -->
-  <button class="desk-item" data-modal="modal-about" aria-label="About me">
-    <div class="photo-frame-wrap">
-      <div class="pf-outer">
-        <div class="pf-mat">
-          <img src="static/headshot.jpeg" alt="Eric Wimsatt" class="pf-img">
-        </div>
-      </div>
-      <div class="pf-stand"></div>
-    </div>
-  </button>
+      h1,
+      h2,
+      h3,
+      h4,
+      p {
+        margin: 0;
+      }
 
-  <!-- ③ Personal Projects — notebook -->
-  <button class="desk-item" data-modal="modal-projects" aria-label="Personal projects">
-    <div class="nb-item">
-      <div class="nb-rings-side">
-        <span></span><span></span><span></span>
-        <span></span><span></span><span></span>
-      </div>
-      <div class="nb-cover-face">
-        <div class="nb-label-area">
-          <p class="nb-subject-text">Fun</p>
-          <p class="nb-title-text">Projects</p>
-        </div>
-        <div class="nb-rule"></div>
-      </div>
-    </div>
-  </button>
+      .site-nav {
+        position: fixed;
+        z-index: 20;
+        inset: 18px 18px auto 18px;
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        color: var(--aged-paper);
+        font-family: var(--font-mono);
+        font-size: 12px;
+        text-transform: uppercase;
+        pointer-events: none;
+      }
 
-  <!-- ④ Cal Golden Bear figurine -->
-  <button class="desk-item" data-modal="modal-cal" aria-label="UC Berkeley">
-    <div class="bear-wrap">
-      <svg class="bear-svg" viewBox="0 0 120 135" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <ellipse cx="60" cy="130" rx="40" ry="6" fill="rgba(0,0,0,0)"/>
-        <ellipse cx="60" cy="96" rx="32" ry="28" fill="#FDB924" stroke="#c49010" stroke-width="1.5"/>
-        <ellipse cx="60" cy="98" rx="19" ry="18" fill="#e8b840" opacity="0.55"/>
-        <circle cx="60" cy="53" r="29" fill="#FDB924" stroke="#c49010" stroke-width="1.5"/>
-        <circle cx="35" cy="30" r="12" fill="#FDB924" stroke="#c49010" stroke-width="1.5"/>
-        <circle cx="35" cy="30" r="7.5" fill="#d89820"/>
-        <circle cx="85" cy="30" r="12" fill="#FDB924" stroke="#c49010" stroke-width="1.5"/>
-        <circle cx="85" cy="30" r="7.5" fill="#d89820"/>
-        <circle cx="50" cy="48" r="5.5" fill="#003262"/>
-        <circle cx="70" cy="48" r="5.5" fill="#003262"/>
-        <circle cx="51" cy="47" r="2"   fill="white"/>
-        <circle cx="71" cy="47" r="2"   fill="white"/>
-        <ellipse cx="60" cy="62" rx="13" ry="9.5" fill="#d89820"/>
-        <ellipse cx="60" cy="58" rx="5.5" ry="3.5" fill="#2a1200"/>
-        <path d="M54 66 Q60 72 66 66" stroke="#2a1200" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-        <ellipse cx="36" cy="116" rx="13" ry="8.5" fill="#FDB924" stroke="#c49010" stroke-width="1.5"/>
-        <ellipse cx="84" cy="116" rx="13" ry="8.5" fill="#FDB924" stroke="#c49010" stroke-width="1.5"/>
-        <line x1="31" y1="116" x2="29" y2="123" stroke="#c49010" stroke-width="1.3"/>
-        <line x1="36" y1="117" x2="36" y2="124" stroke="#c49010" stroke-width="1.3"/>
-        <line x1="41" y1="116" x2="43" y2="123" stroke="#c49010" stroke-width="1.3"/>
-        <line x1="79" y1="116" x2="77" y2="123" stroke="#c49010" stroke-width="1.3"/>
-        <line x1="84" y1="117" x2="84" y2="124" stroke="#c49010" stroke-width="1.3"/>
-        <line x1="89" y1="116" x2="91" y2="123" stroke="#c49010" stroke-width="1.3"/>
-      </svg>
-    </div>
-  </button>
+      .site-nav a,
+      .site-nav span {
+        pointer-events: auto;
+        text-decoration: none;
+        text-shadow: 0 1px 18px var(--gallery-shadow);
+      }
 
-  <!-- ⑥ Contact — thumbtack note -->
-  <div class="desk-item contact-item">
-    <div class="contact-note">
-      <div class="thumbtack">
-        <div class="pin-head"></div>
-        <div class="pin-shaft"></div>
-      </div>
-      <ul class="contact-list">
-        <li><a href="mailto:ericwimsatt@gmail.com">ericwimsatt@gmail.com</a></li>
-        <li><a href="https://github.com/Ericwimsatt" target="_blank" rel="noopener">github.com/Ericwimsatt</a></li>
-        <li>San Francisco, CA</li>
-      </ul>
-    </div>
-  </div>
+      .site-nav div {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
 
-</main>
+      .hero {
+        position: relative;
+        min-height: 100svh;
+        overflow: hidden;
+        background:
+          linear-gradient(90deg, rgba(237, 225, 201, 0.04), rgba(29, 37, 35, 0.28)),
+          url("https://images.metmuseum.org/CRDImages/ep/original/Wrightsman18.jpg");
+        background-size: cover;
+        background-position: center;
+      }
 
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(180deg, rgba(29, 37, 35, 0.02), rgba(29, 37, 35, 0.2)),
+          url("assets/perspective-scrim.svg");
+        background-size: cover;
+        mix-blend-mode: multiply;
+      }
 
-</div><!-- /page-shell -->
+      .hero-copy {
+        position: absolute;
+        left: clamp(20px, 5vw, 76px);
+        bottom: clamp(28px, 7vw, 86px);
+        z-index: 1;
+        width: min(470px, 38vw);
+        padding: 18px;
+        color: var(--ink);
+        text-align: left;
+        background: rgba(255, 248, 232, 0.9);
+        border: 1px solid rgba(29, 37, 35, 0.28);
+        box-shadow: var(--shadow-caption);
+      }
 
-<div class="overlay" id="overlay" aria-hidden="true">
+      .hero-kicker,
+      .eyebrow,
+      .meta-label {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        line-height: 1.5;
+        text-transform: uppercase;
+      }
 
-  <div class="modal" id="modal-roblox" role="dialog" aria-modal="true" aria-label="Roblox experience">
-  <button class="modal-x" aria-label="Close">&#x2715;</button>
-  <div class="chat-app">
-    <div class="chat-header">
-      <div class="chat-avatar">
-        <svg viewBox="0 0 40 40" width="38" height="38">
-          <g transform="rotate(5, 20, 20)">
-            <path fill-rule="evenodd" fill="#111" d="M2,2 H38 V38 H2 Z M16,16 H24 V24 H16 Z"/>
-          </g>
-        </svg>
-      </div>
+      .hero-name {
+        display: block;
+        margin-top: 10px;
+        font-family: var(--font-serif);
+        font-size: clamp(1.6rem, 3vw, 2.75rem);
+        line-height: 0.98;
+        font-weight: 500;
+      }
+
+      .hero h1 {
+        margin-top: 10px;
+        font-family: var(--font-serif);
+        font-size: 1.6rem;
+        line-height: 1.05;
+        font-weight: 500;
+        letter-spacing: 0;
+      }
+
+      .hero-copy p {
+        max-width: 36ch;
+        margin: 12px 0 0;
+        font-size: 1rem;
+        color: var(--ink-muted);
+      }
+
+      .button-row {
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 22px;
+      }
+
+      .button {
+        min-height: 42px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        padding: 0 16px;
+        background: var(--brick);
+        color: var(--aged-paper);
+        font-size: 1rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .button.ghost {
+        background: rgba(255, 248, 232, 0.12);
+        border: 1px solid currentColor;
+      }
+
+      .section {
+        position: relative;
+        padding: clamp(54px, 8vw, 110px) clamp(20px, 4vw, 56px);
+      }
+
+      .section-inner {
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+
+      .section-heading {
+        display: grid;
+        grid-template-columns: minmax(0, 0.85fr) minmax(280px, 1fr);
+        gap: 36px;
+        align-items: end;
+        margin-bottom: 32px;
+      }
+
+      .section-heading h2 {
+        margin-top: 12px;
+        font-family: var(--font-serif);
+        font-size: clamp(1.6rem, 3vw, 2.75rem);
+        line-height: 1.04;
+        font-weight: 500;
+      }
+
+      .section-heading p {
+        color: var(--ink-muted);
+        font-size: 1rem;
+      }
+
+      .heading-link {
+        display: inline-flex;
+        margin-top: 14px;
+        color: var(--brick);
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        line-height: 1.5;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+
+      .about {
+        background: var(--venetian-stone);
+      }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+        gap: 1px;
+        border: 1px solid var(--line);
+        background: var(--line);
+        box-shadow: var(--shadow-plate);
+      }
+
+      .about-copy,
+      .about-ledger {
+        min-height: 420px;
+        padding: clamp(24px, 4vw, 44px);
+        background: var(--aged-paper);
+      }
+
+      .about-copy p {
+        max-width: 74ch;
+        margin-top: 18px;
+        font-size: 1rem;
+      }
+
+      .about-copy p:first-of-type {
+        margin-top: 0;
+        font-family: var(--font-serif);
+        font-size: clamp(1.4rem, 3vw, 1.8rem);
+        line-height: 1.16;
+      }
+
+      .ledger {
+        display: grid;
+        margin-top: 22px;
+      }
+
+      .ledger span {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 12px 0;
+        border-top: 1px solid currentColor;
+        font-family: var(--font-mono);
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+
+      .roblox {
+        color: var(--aged-paper);
+        background:
+          linear-gradient(180deg, rgba(29, 37, 35, 0.18), rgba(29, 37, 35, 0.5)),
+          url("https://images.metmuseum.org/CRDImages/ep/original/Wrightsman16.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .roblox .section-heading p,
+      .roblox .eyebrow {
+        color: var(--aged-paper);
+      }
+
+      .stat-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1px;
+        border: 1px solid rgba(255, 248, 232, 0.34);
+        background: rgba(255, 248, 232, 0.34);
+        box-shadow: var(--shadow-plate);
+      }
+
+      .stat-card {
+        min-height: 260px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: clamp(22px, 3vw, 34px);
+        background: rgba(29, 37, 35, 0.72);
+        backdrop-filter: blur(2px);
+      }
+
+      .stat-value {
+        display: block;
+        color: var(--aged-paper);
+        font-family: var(--font-serif);
+        font-size: clamp(58px, 8vw, 128px);
+        line-height: 0.82;
+        font-weight: 500;
+      }
+
+      .stat-card h3 {
+        margin-top: 16px;
+        color: var(--canal-sky);
+        font-size: 1rem;
+      }
+
+      .stat-card p {
+        margin-top: 16px;
+        color: rgba(255, 248, 232, 0.86);
+        font-size: 1rem;
+      }
+
+      .guide-section {
+        overflow: hidden;
+        background: #e9dcc4;
+      }
+
+      .guide-section::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(90deg, transparent 0 12%, rgba(29, 37, 35, 0.12) 12% calc(12% + 1px), transparent calc(12% + 1px) 100%),
+          linear-gradient(90deg, transparent 0 50%, rgba(29, 37, 35, 0.1) 50% calc(50% + 1px), transparent calc(50% + 1px) 100%),
+          linear-gradient(90deg, transparent 0 88%, rgba(29, 37, 35, 0.12) 88% calc(88% + 1px), transparent calc(88% + 1px) 100%),
+          linear-gradient(180deg, transparent 0 32%, rgba(29, 37, 35, 0.08) 32% calc(32% + 1px), transparent calc(32% + 1px) 100%),
+          linear-gradient(180deg, transparent 0 72%, rgba(29, 37, 35, 0.08) 72% calc(72% + 1px), transparent calc(72% + 1px) 100%);
+        pointer-events: none;
+      }
+
+      .projects {
+        padding-block: clamp(44px, 6vw, 72px) clamp(24px, 3vw, 38px);
+        background: var(--venetian-stone);
+      }
+
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1px;
+        border: 1px solid var(--line);
+        background: var(--line);
+        box-shadow: var(--shadow-plate);
+      }
+
+      .project-card {
+        min-height: 330px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 24px;
+        background: var(--aged-paper);
+        text-decoration: none;
+      }
+
+      .project-card:nth-child(2n) {
+        background: var(--canal-sky);
+      }
+
+      .project-card h3 {
+        margin: 12px 0;
+        font-family: var(--font-serif);
+        font-size: clamp(1.6rem, 3vw, 2.75rem);
+        line-height: 1;
+        font-weight: 500;
+      }
+
+      .project-card p {
+        color: var(--ink-muted);
+        font-size: 1rem;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 22px;
+      }
+
+      .tag {
+        border: 1px solid currentColor;
+        border-radius: 4px;
+        padding: 4px 7px;
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+      }
+
+      .college {
+        padding-block: clamp(20px, 3vw, 38px) clamp(34px, 5vw, 66px);
+        background:
+          linear-gradient(90deg, rgba(237, 225, 201, 0.86), rgba(237, 225, 201, 0.62)),
+          url("https://images.metmuseum.org/CRDImages/ep/original/Wrightsman19.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .college-card {
+        max-width: 840px;
+        margin-left: auto;
+        padding: clamp(24px, 4vw, 44px);
+        background: rgba(255, 248, 232, 0.9);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow-caption);
+      }
+
+      .college-card h2 {
+        margin-top: 10px;
+        font-family: var(--font-serif);
+        font-size: clamp(1.6rem, 3vw, 2.75rem);
+        line-height: 1.04;
+        font-weight: 500;
+      }
+
+      .college-research {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1px;
+        margin-top: 26px;
+        background: var(--line);
+        border: 1px solid var(--line);
+      }
+
+      .research-header {
+        grid-column: 1 / -1;
+        padding: 12px 20px;
+        background: var(--canal-water);
+        color: var(--aged-paper);
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        line-height: 1.5;
+        text-transform: uppercase;
+      }
+
+      .college-research article {
+        padding: 20px;
+        background: var(--aged-paper);
+      }
+
+      .close {
+        min-height: 0;
+        padding-block: clamp(38px, 5vw, 72px);
+        color: var(--aged-paper);
+        background:
+          linear-gradient(90deg, rgba(47, 111, 120, 0.88), rgba(29, 37, 35, 0.74)),
+          url("assets/canaletto-waterline.svg");
+        background-size: cover;
+      }
+
+      .close .section-inner {
+        display: grid;
+        align-items: end;
+      }
+
+      .close-copy {
+        max-width: 760px;
+      }
+
+      .close h2 {
+        font-family: var(--font-serif);
+        font-size: clamp(1.6rem, 3vw, 2.75rem);
+        line-height: 1.02;
+        font-weight: 500;
+      }
+
+      .close p {
+        max-width: 600px;
+        margin-top: 18px;
+        color: rgba(255, 248, 232, 0.84);
+        font-size: 1rem;
+      }
+
+      .art-source {
+        margin-top: 28px;
+        color: rgba(255, 248, 232, 0.75);
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+      }
+
+      @media (max-width: 980px) {
+        .section-heading,
+        .about-grid,
+        .college-research {
+          grid-template-columns: 1fr;
+        }
+
+        .stat-grid,
+        .project-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .hero-copy {
+          left: 18px;
+          right: 18px;
+          bottom: 24px;
+          width: auto;
+          text-align: left;
+        }
+
+        .hero-copy p {
+          margin-left: 0;
+        }
+
+        .button-row {
+          justify-content: flex-start;
+        }
+      }
+
+      @media (max-width: 680px) {
+        .site-nav {
+          position: absolute;
+          color: var(--aged-paper);
+        }
+
+        .site-nav div {
+          display: none;
+        }
+
+        .hero {
+          min-height: 860px;
+        }
+
+        .stat-grid,
+        .project-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .stat-card,
+        .project-card {
+          min-height: 260px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <span>Eric Wimsatt</span>
       <div>
-        <div class="chat-name">Roblox</div>
-        <div class="chat-sub">Software Engineer, Growth &middot; Jul 2021 &ndash; Jul 2024</div>
+        <a href="#roblox">Roblox</a>
+        <a href="#projects">Projects</a>
+        <a href="#college">Berkeley</a>
+        <a href="mailto:ericwimsatt@gmail.com">Email</a>
       </div>
-    </div>
-    <div class="chat-messages">
-      <div class="chat-system">Stack: React &middot; Lua &middot; C++ &middot; Java</div>
+    </nav>
 
-      <div class="chat-row chat-left">
-        <div class="chat-bubble chat-bubble-l">
-          <div class="chat-label">Performance</div>
-          <strong>Halved</strong> time-to-interactive on startup by batching and removing network requests on the critical path.
+    <header class="hero">
+      <div class="hero-copy">
+        <strong class="hero-name">Eric Wimsatt</strong>
+        <p class="hero-kicker">Software engineer / Roblox / Berkeley</p>
+        <h1>It’s not AI slop when I do it.</h1>
+        <p>Former Roblox engineer looking for a smaller team with more direct product impact.</p>
+        <p>I like building close to users, shipping fast, and having ownership over my work.</p>
+      </div>
+    </header>
+
+    <section class="section about guide-section" id="about">
+      <div class="section-inner">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">01 / About</p>
+            <h2>Large company experience, startup mindset.</h2>
+          </div>
+        </div>
+        <div class="about-grid">
+          <article class="about-copy">
+            <p>Hi, I'm Eric. I worked on the App and Growth teams at Roblox, joining when there were 800 people and leaving at 2,500.</p>
+            <p>I loved the people I worked with, but I really want to work on something that's less complete. I want to work at a smaller company: closer to users, closer to product decisions, and closer to the consequences of what ships.</p>
+            <p>Lately I have been exploring AI agents for people building software (especially non-technical people), games, and some math projects.</p>
+          </article>
+          <aside class="about-ledger">
+            <div class="ledger">
+              <span><b>Location</b><b>San Francisco</b></span>
+              <span><b>Best fit</b><b>Small product team</b></span>
+              <span><b>Strength</b><b>Product engineering + Design</b></span>
+              <span><b>Outside</b><b>Swim / Travel / Art</b></span>
+            </div>
+          </aside>
         </div>
       </div>
+    </section>
 
-      <div class="chat-row chat-left">
-        <div class="chat-bubble chat-bubble-l">
-          <div class="chat-label">Platform Stability</div>
-          Added retry mechanisms at common failure points &mdash; resulting in a <strong>+2% improvement</strong> in app startup success rate.
+    <section class="section roblox" id="roblox">
+      <div class="section-inner">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">02 / Roblox</p>
+            <h2>Metrics worth 1000 words</h2>
+          </div>
+          <p>I worked across the company as a client engineer.</p>
+        </div>
+        <div class="stat-grid" aria-label="Roblox impact statistics">
+          <article class="stat-card">
+            <div>
+              <span class="stat-value">50%</span>
+              <h3>Faster startup time</h3>
+            </div>
+            <p>Halved time-to-interactive by batching and removing network requests.</p>
+          </article>
+          <article class="stat-card">
+            <div>
+              <span class="stat-value">+2%</span>
+              <h3>Startup success rate</h3>
+            </div>
+            <p>Added retry mechanisms at common failure points to improve platform startup stability.</p>
+          </article>
+          <article class="stat-card">
+            <div>
+              <span class="stat-value">+4%</span>
+              <h3>Game-join success rate</h3>
+            </div>
+            <p>Identified failure cases, redrew game join routes, and redesigned the loading screen.</p>
+          </article>
+          <article class="stat-card">
+            <div>
+              <span class="stat-value">+18%</span>
+              <h3>Playtime from notifications</h3>
+            </div>
+            <p>Fixed notification-system issues and added in-game toasts for friend join and leave events.</p>
+          </article>
         </div>
       </div>
-      <div class="chat-img-row chat-left">
-        <div class="chat-img-wrap">
-          <img src="static/roblox-error.webp" alt="Roblox error screen" class="chat-img">
+    </section>
+
+    <section class="section projects" id="projects">
+      <div class="section-inner">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">03 / Projects</p>
+            <h2>Tools, games, and experiments.</h2>
+            <a class="heading-link" href="https://github.com/Ericwimsatt" rel="me">View GitHub</a>
+          </div>
+          <p>Live feed of the most recent projects I've contributed to on GitHub.</p>
+        </div>
+        <div class="project-grid" id="projectGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section college" id="college">
+      <div class="section-inner">
+        <article class="college-card">
+          <p class="eyebrow">04 / Education</p>
+          <h2>UC Berkeley, class of 2021</h2>
+          <div class="college-research">
+            <div class="research-header">Research</div>
+            <article>
+              <p class="meta-label">Gene Sequencing</p>
+              <p>Researched more performant DNA sequencing techniques for bulk analysis, including memory-efficient bloom filter work.</p>
+            </article>
+            <article>
+              <p class="meta-label">PublicEditor</p>
+              <p>Built tooling to identify and label misinformation, including an annotator-consensus framework used in academic research.</p>
+            </article>
+          </div>
+          <div class="ledger">
+            <span><b>Extracurriculars</b><b>D1 triathlete / middle school mentor / social organizer</b></span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="section close" id="contact">
+      <div class="section-inner">
+        <div class="close-copy">
+          <p class="eyebrow">05 / Contact</p>
+          <h2>If you need an engineer with taste, experience, and speed, let's connect.</h2>
+          <div class="button-row">
+            <a class="button" href="mailto:ericwimsatt@gmail.com">ericwimsatt@gmail.com</a>
+            <a class="button ghost" href="https://github.com/Ericwimsatt" rel="me">GitHub</a>
+          </div>
+          <p class="art-source">San Francisco, CA</p>
         </div>
       </div>
+    </footer>
 
-      <div class="chat-row chat-left">
-        <div class="chat-bubble chat-bubble-l">
-          <div class="chat-label">Growth &amp; Matchmaking</div>
-          Improved game-join success rate by <strong>+4%</strong> by identifying failure cases, redesigning UX routes, and adding in-game feedback toasts to reduce user confusion during loading.
-        </div>
-      </div>
-      <div class="chat-img-row chat-left">
-        <div class="chat-img-wrap">
-          <img src="static/social_toast.png" alt="Social toast notification" class="chat-img">
-        </div>
-      </div>
+    <script>
+      const projects = [
+        {
+          name: "SheepDog",
+          category: "Agents",
+          description: "A proactive coding harness for long-running tasks and refactoring operations",
+          tech: ["TypeScript"],
+          url: "https://github.com/Ericwimsatt/sheepDog"
+        },
+        {
+          name: "bulk-refactor",
+          category: "Supporting Vibe Coders",
+          description: "A toolkit for bringing existing codebases up to current conventions with deterministic refactors and agentic task completion.",
+          tech: ["Python"],
+          url: "https://github.com/Ericwimsatt/bulk-refactor"
+        },
+        {
+          name: "pseudo",
+          category: "Supporting Vibe Coders",
+          description: "A plain-English code viewer that helps less-technical users understand what is happening inside their codebases.",
+          tech: ["React", "TypeScript", "Electron"],
+          url: "https://github.com/Ericwimsatt/pseudo2"
+        },
+        {
+          name: "manhunt",
+          category: "IRL Games",
+          description: "A companion app for a large-scale game in Golden Gate Park, built around live coordination and playful constraints.",
+          tech: ["React Native", "TypeScript", "Convex"],
+          url: "https://github.com/Ericwimsatt/manhunt"
+        },
+        {
+          name: "rockets",
+          category: "Card Games",
+          description: "An extension of Treys for complex poker-hand and table-game simulations.",
+          tech: ["Python"],
+          url: "https://github.com/Ericwimsatt/rockets"
+        },
+        {
+          name: "collusion",
+          category: "Card Games",
+          description: "Strategy testing for poker and other table games, focused on simulating decisions and outcomes.",
+          tech: ["Python"],
+          url: "https://github.com/Ericwimsatt/gamble"
+        }
+      ];
 
-      <div class="chat-row chat-right">
-        <div class="chat-bubble chat-bubble-r">
-          wow
-        </div>
-      </div>
+      const projectGrid = document.querySelector("#projectGrid");
 
-    </div>
-  </div>
-</div>
+      projects.slice(0, 6).forEach((project) => {
+        const card = document.createElement("a");
+        card.className = "project-card";
+        card.href = project.url;
+        card.setAttribute("aria-label", `${project.name} on GitHub`);
 
+        const body = document.createElement("div");
+        const category = document.createElement("p");
+        category.className = "meta-label";
+        category.textContent = project.category;
+        const title = document.createElement("h3");
+        title.textContent = project.name;
+        const description = document.createElement("p");
+        description.textContent = project.description;
+        body.append(category, title, description);
 
-  <div class="modal" id="modal-about" role="dialog" aria-modal="true" aria-label="About me">
-  <button class="modal-x modal-x-dark" aria-label="Close">&#x2715;</button>
-  <div class="big-note">
-    <h2 class="big-note-h">About Me</h2>
-    <p>Hi! I&rsquo;m Eric. I was a software engineer on the App and Growth teams at Roblox &mdash; I joined when there were about 800 people and left when there were 2500. I'm looking for an opportunity to join a smaller team where I can more directly impact the product.</p>
-    <p> I loved being at Roblox. I got to learn from and work with the smartest people I've ever met. It was awesome to work on something that so many users loved. </p>
-    <p> I left because I wanted to join or start a startup. Unfortunately those plans were delayed when I crashed my car :&lt. I'm all recovered now! I've been traveling and enjoying some rest. I used the downtime to work on other projects I've wanted to tackle forever: AI agents to support vibecoders, IRL games, and some math projects.</p>
-    <p>I like working close to users, shipping fast, and feeling like my work has a real impact on people.</p>
-    <p> In my free time I like to travel, swim, and check out art museums</p>
+        const tags = document.createElement("div");
+        tags.className = "tags";
+        project.tech.forEach((item) => {
+          const tag = document.createElement("span");
+          tag.className = "tag";
+          tag.textContent = item;
+          tags.append(tag);
+        });
 
-    <div class="about-scrapbook">
-      <figure class="about-scrap" style="--rot: -4deg">
-        <img src="static/Hike.jpeg" alt="Hiking outdoors">
-      </figure>
-      <figure class="about-scrap" style="--rot: 3deg">
-        <img src="static/Pyramids.jpeg" alt="The Pyramids">
-      </figure>
-    </div>
-  </div>
-</div>
-
-
-  <div class="modal" id="modal-projects" role="dialog" aria-modal="true" aria-label="Personal projects">
-  <button class="modal-x modal-x-dark" aria-label="Close">&#x2715;</button>
-  <div class="lined-paper">
-    <div class="lp-holes">
-      <div class="lp-hole"></div><div class="lp-hole"></div>
-      <div class="lp-hole"></div><div class="lp-hole"></div>
-    </div>
-    <div class="lp-content">
-      <h2 class="lp-title">Projects</h2>
-
-      <div class="proj-section">
-        <h3 class="proj-cat">Supporting Vibe Coders</h3>
-        <ul class="proj-lines">
-          <li><a href="https://github.com/Ericwimsatt/bulk-refactor" target="_blank" rel="noopener"><span class="proj-icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 2a4 4 0 0 0-3.9 4.9L4.5 12.5a1.5 1.5 0 0 0 2.1 2.1l5.6-5.6A4 4 0 1 0 14 2zm0 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" stroke="#060301" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="proj-text"><strong>bulk-refactor</strong> &mdash; Toolkit to bring existing codebases up to current conventions. Combines deterministic refactors and agents to complete tasks <em>(Python)</em></span></a></li>
-          <li><a href="https://github.com/Ericwimsatt/pseudo" target="_blank" rel="noopener"><span class="proj-icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="10" cy="10" rx="9" ry="5.5" stroke="#3b2a18" stroke-width="1.2"/><circle cx="10" cy="10" r="2.5" stroke="#3b2a18" stroke-width="1.2"/><circle cx="10" cy="10" r="1" fill="#3b2a18"/></svg></span><span class="proj-text"><strong>pseudo</strong> &mdash; Plain-English code viewer.  Gives less-technical users a deeper understanding of their codebases <em>(React / Typescript / Electron)</em></span></a></li>
-        </ul>
-      </div>
-
-      <div class="proj-section">
-        <h3 class="proj-cat">Fun</h3>
-        <ul class="proj-lines">
-          <li><a href="https://github.com/Ericwimsatt/manhunt" target="_blank" rel="noopener"><span class="proj-icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a5 5 0 0 0-5 5c0 3.5 5 11 5 11s5-7.5 5-11a5 5 0 0 0-5-5z" stroke="#1d3557" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="7" r="2" stroke="#1d3557" stroke-width="1.2"/></svg></span><span class="proj-text"><strong>manhunt</strong> &mdash; Companion app for a large scale game of manhunt in Golden Gate Park. <em>(React Native / TypeScript / Convex)</em></span></a></li>
-        </ul>
-      </div>
-
-      <div class="proj-section">
-        <h3 class="proj-cat">Card Games</h3>
-        <ul class="proj-lines">
-          <li><a href="https://github.com/Ericwimsatt/rockets" target="_blank" rel="noopener"><span class="proj-icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 2C7 2 5 6 5 9l2 2 1-1 1 4 1-4 1 1 2-2c0-3-2-7-5-7z" stroke="#060301" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 11l-2 3h3m8-3l-3 3h3" stroke="#060301" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="7" r="1.2" fill="#060301"/></svg></span><span class="proj-text"><strong>rockets</strong> &mdash; Extends the Treys library to support complex simulations of poker hands and table games<em>(Python)</em></span></a></li>
-          <li><a href="https://github.com/Ericwimsatt/gamble" target="_blank" rel="noopener"><span class="proj-icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="11" height="15" rx="2" stroke="#1d3557" stroke-width="1.3"/><rect x="7" y="2" width="11" height="15" rx="2" stroke="#1d3557" stroke-width="1.3"/><text x="10.5" y="12" font-size="7" text-anchor="middle" fill="#e63946" font-family="serif" font-weight="bold">♠</text></svg></span><span class="proj-text"><strong>collusion</strong> &mdash; Strategy testing for poker and other table games <em>(Python)</em></span></a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-  <div class="modal" id="modal-cal" role="dialog" aria-modal="true" aria-label="UC Berkeley research">
-  <button class="modal-x modal-x-dark" aria-label="Close">&#x2715;</button>
-  <div class="diploma">
-    <div class="diploma-border">
-      <div class="diploma-inner">
-        <p class="dip-university">University of California, Berkeley</p>
-        <div class="dip-rule"></div>
-        <p class="dip-year">Class of 2021</p>
-        <div class="dip-rule"></div>
-        <div class="dip-honors">
-          <p class="dip-honors-title">Side Quests</p>
-          <p><strong>Gene Sequencing</strong> &mdash; Researched more performant DNA sequencing techniques to enable bulk analysis. Worked on a memory-efficient bloom filter implementation.</p>
-          <p><strong>PublicEditor</strong> &mdash; Created a tool to identify and label misinformation. Designed an annotator-consensus framework that is still used in academic research.</p>
-        </div>
-        <div class="dip-rule"></div>
-        <div class="dip-honors dip-extracurriculars">
-          <p class="dip-honors-title">Fun Stuff</p>
-          <p>D1 Triathlete &middot; Mentor at Local Middle School &middot; Event Organizer</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-</div><!-- /overlay -->
-
-
-<script src="script.js"></script>
-</body>
-
+        card.append(body, tags);
+        projectGrid.append(card);
+      });
+    </script>
+  </body>
 </html>

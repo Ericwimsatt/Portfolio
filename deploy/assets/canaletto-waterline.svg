@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="420" viewBox="0 0 1600 420" role="img" aria-label="Generated canal waterline overlay texture">
+  <rect width="1600" height="420" fill="#2f6f78"/>
+  <g fill="none" stroke="#fff8e8" stroke-opacity=".22" stroke-width="2">
+    <path d="M0 96 C180 82 318 116 496 94 C690 70 842 122 1022 92 C1242 56 1398 114 1600 82"/>
+    <path d="M0 150 C220 132 356 172 536 146 C758 114 914 174 1110 142 C1316 110 1458 160 1600 138"/>
+    <path d="M0 226 C206 204 396 246 574 220 C774 192 980 244 1178 214 C1350 190 1482 230 1600 210"/>
+    <path d="M0 306 C166 282 332 326 520 302 C722 274 906 326 1100 296 C1292 266 1438 318 1600 290"/>
+  </g>
+  <g stroke="#b9d8dc" stroke-opacity=".28" stroke-width="1">
+    <path d="M92 0v420M236 0v420M420 0v420M684 0v420M972 0v420M1260 0v420M1458 0v420"/>
+  </g>
+</svg>
+

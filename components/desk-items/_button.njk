@@ -1,0 +1,13 @@
+{#
+  Reusable desk-item <button> shell.
+  Usage:
+    {% from "components/desk-items/_button.njk" import deskButton %}
+    {% call deskButton("modal-roblox", "Roblox experience") %}
+      ...inner content...
+    {% endcall %}
+#}
+{% macro deskButton(modalId, label) %}
+<button class="desk-item" data-modal="{{ modalId }}" aria-label="{{ label }}">
+{{ caller() }}
+</button>
+{% endmacro %}
