@@ -170,7 +170,7 @@
       }
 
       .button {
-        min-height: 42px;
+        min-height: 44px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -221,6 +221,8 @@
 
       .heading-link {
         display: inline-flex;
+        min-height: 44px;
+        align-items: center;
         margin-top: 14px;
         color: var(--brick);
         font-family: var(--font-mono);
@@ -259,8 +261,8 @@
       .about-copy p:first-of-type {
         margin-top: 0;
         font-family: var(--font-serif);
-        font-size: clamp(1.4rem, 3vw, 1.8rem);
-        line-height: 1.16;
+        font-size: clamp(1.6rem, 3vw, 2.75rem);
+        line-height: 1.05;
       }
 
       .ledger {
@@ -530,9 +532,14 @@
       }
 
       @media (max-width: 680px) {
+        body {
+          overflow-wrap: break-word;
+        }
+
         .site-nav {
           position: absolute;
           color: var(--aged-paper);
+          inset: 16px 18px auto 18px;
         }
 
         .site-nav div {
@@ -540,7 +547,42 @@
         }
 
         .hero {
-          min-height: 860px;
+          min-height: 100svh;
+          background-position: 56% center;
+        }
+
+        .hero-copy {
+          left: 16px;
+          right: 16px;
+          bottom: 18px;
+          padding: 16px;
+          background: rgba(255, 248, 232, 0.93);
+        }
+
+        .hero-name,
+        .hero h1 {
+          line-height: 1.04;
+        }
+
+        .hero-copy p {
+          max-width: none;
+          font-size: 0.98rem;
+          line-height: 1.5;
+        }
+
+        .section {
+          padding-inline: 16px;
+        }
+
+        .section-heading {
+          gap: 16px;
+          margin-bottom: 22px;
+        }
+
+        .about-copy,
+        .about-ledger {
+          min-height: 0;
+          padding: 22px;
         }
 
         .stat-grid,
@@ -551,6 +593,39 @@
         .stat-card,
         .project-card {
           min-height: 260px;
+        }
+
+        .ledger span {
+          flex-direction: column;
+          justify-content: flex-start;
+          gap: 4px;
+        }
+
+        .ledger b {
+          max-width: 100%;
+        }
+
+        .college-card {
+          padding: 22px;
+        }
+
+        .button-row {
+          align-items: stretch;
+        }
+
+        .button {
+          width: 100%;
+          padding-inline: 12px;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 380px) {
+        .hero-copy {
+          left: 12px;
+          right: 12px;
+          bottom: 12px;
+          padding: 14px;
         }
       }
     </style>
