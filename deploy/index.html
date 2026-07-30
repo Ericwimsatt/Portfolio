@@ -174,13 +174,16 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        border: 0;
         border-radius: 4px;
         padding: 0 16px;
         background: var(--brick);
         color: var(--aged-paper);
+        font-family: inherit;
         font-size: 1rem;
         font-weight: 700;
         text-decoration: none;
+        cursor: pointer;
       }
 
       .button.ghost {
@@ -502,6 +505,30 @@
         text-transform: uppercase;
       }
 
+      .copy-toast {
+        position: fixed;
+        right: 18px;
+        bottom: 18px;
+        z-index: 40;
+        max-width: min(320px, calc(100vw - 36px));
+        padding: 12px 14px;
+        background: rgba(255, 248, 232, 0.96);
+        border: 1px solid rgba(29, 37, 35, 0.28);
+        box-shadow: var(--shadow-caption);
+        color: var(--ink);
+        font-size: 1rem;
+        font-weight: 700;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(8px);
+        transition: opacity 180ms ease, transform 180ms ease;
+      }
+
+      .copy-toast.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
       @media (max-width: 980px) {
         .section-heading,
         .about-grid,
@@ -618,6 +645,13 @@
           padding-inline: 12px;
           text-align: center;
         }
+
+        .copy-toast {
+          left: 16px;
+          right: 16px;
+          bottom: 16px;
+          max-width: none;
+        }
       }
 
       @media (max-width: 380px) {
@@ -646,8 +680,8 @@
         <strong class="hero-name">Eric Wimsatt</strong>
         <p class="hero-kicker">Software engineer / Roblox / Berkeley</p>
         <h1>It’s not AI slop when I do it.</h1>
-        <p>Former Roblox engineer looking for a smaller team with more direct product impact.</p>
-        <p>I like building close to users, shipping fast, and having ownership over my work.</p>
+        <p>Former Roblox engineer looking for ways to make software better than ever, exploring AI agents, and improving at my craft.</p>
+        <p>I like building close to users, shipping fast, and feeling the impact of my work.</p>
       </div>
     </header>
 
@@ -662,13 +696,14 @@
         <div class="about-grid">
           <article class="about-copy">
             <p>Hi, I'm Eric. I worked on the App and Growth teams at Roblox, joining when there were 800 people and leaving at 2,500.</p>
-            <p>I loved the people I worked with, but I really want to work on something that's less complete. I want to work at a smaller company: closer to users, closer to product decisions, and closer to the consequences of what ships.</p>
-            <p>Lately I have been exploring AI agents for people building software (especially non-technical people), games, and some math projects.</p>
+            <p>I loved the people I worked with there, but I was always drawn to more open-ended work; work where I can be close to users, ship fast, and have ownership over my work.</p>
+            <p>Lately I have been exploring ways to make software better, (AI Agents and some more deterministic methods). Some of my recent open source work extends this to a less technical audience. </p>
+            <p>If you are thinking about dev tools, novel workflows, games, or ideas adjacent to my open source work, we should compare notes!</p>
           </article>
           <aside class="about-ledger">
             <div class="ledger">
               <span><b>Location</b><b>San Francisco</b></span>
-              <span><b>Best fit</b><b>Small product team</b></span>
+              <span><b>Best Fit</b><b>Independent or small product team</b></span>
               <span><b>Strength</b><b>Product engineering + Design</b></span>
               <span><b>Outside</b><b>Swim / Travel / Art</b></span>
             </div>
@@ -759,15 +794,17 @@
       <div class="section-inner">
         <div class="close-copy">
           <p class="eyebrow">05 / Contact</p>
-          <h2>If you need an engineer with taste, experience, and speed, let's connect.</h2>
+          <h2>Let's connect</h2>
+          <p>If you're thinking about AI, open source tools, or a product idea we could shape together, feel free to reach out! (Especially if you're in SF!)</p>
           <div class="button-row">
-            <a class="button" href="mailto:ericwimsatt@gmail.com">ericwimsatt@gmail.com</a>
+            <button class="button" type="button" data-copy-email="ericwimsatt@gmail.com" aria-label="Copy email address to clipboard">ericwimsatt@gmail.com</button>
             <a class="button ghost" href="https://github.com/Ericwimsatt" rel="me">GitHub</a>
           </div>
           <p class="art-source">San Francisco, CA</p>
         </div>
       </div>
     </footer>
+    <div class="copy-toast" id="copyToast" role="status" aria-live="polite" aria-atomic="true">Copied email to clipboard</div>
 
     <script>
       const projects = [
@@ -816,6 +853,46 @@
       ];
 
       const projectGrid = document.querySelector("#projectGrid");
+      const emailButton = document.querySelector("[data-copy-email]");
+      const copyToast = document.querySelector("#copyToast");
+      let copyToastTimer;
+
+      const showCopyToast = (message) => {
+        copyToast.textContent = message;
+        copyToast.classList.add("is-visible");
+        window.clearTimeout(copyToastTimer);
+        copyToastTimer = window.setTimeout(() => {
+          copyToast.classList.remove("is-visible");
+        }, 2200);
+      };
+
+      const copyText = async (text) => {
+        if (navigator.clipboard?.writeText) {
+          await navigator.clipboard.writeText(text);
+          return;
+        }
+
+        const textarea = document.createElement("textarea");
+        textarea.value = text;
+        textarea.setAttribute("readonly", "");
+        textarea.style.position = "fixed";
+        textarea.style.opacity = "0";
+        document.body.append(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        textarea.remove();
+      };
+
+      emailButton?.addEventListener("click", async () => {
+        const email = emailButton.dataset.copyEmail;
+
+        try {
+          await copyText(email);
+          showCopyToast("Copied email to clipboard");
+        } catch {
+          showCopyToast(`Copy failed: ${email}`);
+        }
+      });
 
       projects.slice(0, 6).forEach((project) => {
         const card = document.createElement("a");
